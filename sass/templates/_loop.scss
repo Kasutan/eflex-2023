@@ -1,0 +1,23 @@
+.loop-slider {
+	overflow: auto;
+	margin-bottom: 1;
+	padding-bottom:3.2rem;
+	position: relative;
+}
+.loop {
+	--gap:1.6rem;
+	--largeur-vignette:21rem;
+	--nb-col:2;
+	--ratio:1.06;
+	display: grid;
+	grid-template-columns: repeat(var(--nb-col),var(--largeur-vignette));
+	gap:var(--gap);
+	list-style:none;
+	margin:0;
+
+	@include bp(lg) {
+		--largeur-vignette:1fr;
+		--nb-col:3;
+		--ratio:1.5;
+	}
+}

@@ -1,0 +1,196 @@
+/*--------------------------------------------------------------
+## Site header
+--------------------------------------------------------------*/
+.site-header {
+	background-color: var(--wp--preset--color--sand-main);
+	position: relative;
+	z-index: 10;
+}
+.inner-header {
+	--taille-logo:3.3rem;
+	
+	align-items: center;
+	display: flex;
+	height:var(--header-height);
+	padding: 8px 18px;
+	position: relative;
+	
+
+	a.resa.mobile {
+		line-height: 1;
+		margin-bottom: 0;
+		margin-right: 32px;
+	}
+	.menu-toggle {
+		position: relative;
+	}
+
+	
+
+	@include bp(md) {
+	}
+	@include bp(lg) {
+		--taille-logo:8rem;
+		flex-direction: column;
+		height:auto;
+		padding:16px 0;
+		a.resa.mobile {
+			display: none;
+		}
+
+		.logo-header {
+			flex-basis:unset;
+			margin-left: auto;
+			margin-right: auto;
+			margin-bottom: 32px;
+			max-width:var(--taille-logo);
+			position:relative;
+			left:-12px;
+		}
+
+	}
+
+}
+.site-header.volet-ouvert {
+	a.resa.mobile {
+		display: none;
+	}
+}
+	
+
+.logo-header {
+	flex:0 0 var(--taille-logo);
+	margin-right: auto;
+}
+
+
+//Header fixe en haut de page en mobile
+.site-header.js-fixed {
+	//box-shadow: 0 3px 3px rgba(18,75,90,0.2);
+	position:fixed;
+	left: 0;
+	top: 0;
+	width:100%;
+
+	@include bp(lg) {
+		position:relative;
+		width: unset;
+		top:unset;
+	}
+}
+
+#wpadminbar {
+	position: fixed;
+}
+.admin-bar .site-header.js-fixed {
+	top:46px;
+	@include bp(md) {
+		top:unset;
+	}
+}
+
+//Header sticky à gauche en desktop
+@include bp(lg) {
+	.inner-header {
+		padding-bottom: 10rem;
+		position:sticky;
+		top:5rem;
+	}
+}
+
+
+
+/*--------------------------------------------------------------
+## Ancre pour backtotop
+--------------------------------------------------------------*/
+#main-content {
+	position: relative;
+}
+#haut-page {
+	position: relative;
+	top:-200px;
+}
+/*--------------------------------------------------------------
+## Entry-header
+--------------------------------------------------------------*/
+.page-banniere {
+	--padding-top:3.4rem;
+	align-items: center;
+	display: flex;
+	height:var(--hauteur-banniere);
+	justify-content: center;
+	overflow: hidden;
+	margin: 0 auto;
+	position: relative;	
+	padding:var(--padding-top) var(--padding-x);
+	max-width:var(--largeur-max);
+	width:100%;
+
+	img {
+		height:100%;
+		left:0;
+		position: absolute;
+		top:0;
+		width:100%;
+	}
+	.filtre {
+		background-color: #000;
+		height:100%;
+		left:0;
+		opacity: 0.6;
+		position: absolute;
+		top:0;
+		width:100%;
+	}
+	.titre-banniere, .retour {
+		color:var(--wp--preset--color--blanc);
+		position: relative ;
+	}
+	a.retour {
+		font-size: 1.6rem;
+		font-weight: 400;
+		left:var(--padding-x);
+		position: absolute;
+		text-decoration: none;
+		text-transform: uppercase;
+		top:var(--padding-top);
+	}
+	.titre-banniere {
+		text-align: center;
+	}
+
+	--trait:8rem;
+	@include bp(sm) {
+		--trait:21vw;
+	}
+	@include bp(lg) {
+		--trait:27.7rem;
+		a.retour {
+			font-size: 2.4rem;
+			top:5rem;
+		}
+	}
+	@include bp(xl) {
+		--trait:40rem;
+	}
+	&::after {
+		background-color: var(--wp--preset--color--orange-main);
+		bottom:0;
+		content:' ';
+		height:6px;
+		left:calc((100% - var(--trait)) / 2);
+		position:absolute;
+		width:var(--trait);
+	}
+}
+
+@include bp(lg) {
+	.banniere-reduite .page-banniere {
+		height:31.5rem;
+	}
+}
+
+.entry-title {
+	text-align: center;
+}
+

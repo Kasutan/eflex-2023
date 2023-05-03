@@ -1,0 +1,123 @@
+// Breakpoints
+@mixin bp($point) {
+	$sm: "(min-width: 500px)";
+	$md: "(min-width: 768px)";
+	$lg: "(min-width: 960px)";
+	$xl: "(min-width: 1440px)";
+	$xxl: "(min-width: 1920px)";
+  
+	@if $point == sm {
+	@media #{$sm} { @content; }
+	}
+	@else if $point == md {
+	@media #{$md} { @content; }
+	}
+
+	@else if $point == lg {
+	@media #{$lg} { @content; }
+	}
+  
+	@else if $point == xl {
+	@media #{$xl} { @content; }
+	}
+
+	@else if $point == xxl {
+		@media #{$xxl} { @content; }
+		}
+}
+
+@mixin fs($px) {
+	font-size:calc(#{$px} * var(--taille-texte) / 15);
+}
+
+@mixin box-shadow {
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+@mixin bleed {
+	width: 100vw;
+	margin-left: 50%;
+	transform: translateX(-50%);
+	@include bp(xxl) {
+		width:var(--largeur-max);
+	}
+}
+
+@mixin bleed-ohm {
+	width: calc(100% + 2*var(--padding-x));
+	transform: translateX(calc(-1*var(--padding-x)));
+}
+
+@mixin unset-bleed {
+	width: unset;
+	margin-left: unset;
+	transform: unset;
+}
+
+@mixin largeur-max {
+	max-width:var(--largeur-max);
+	margin-left:auto;
+	margin-right: auto;
+}
+
+
+@mixin bouton {
+	font-weight: 700;
+	border: solid 2px currentColor;
+	border-radius: 8px;
+
+	cursor: pointer;
+	display:inline-block;
+	font-size: 1.2rem;
+	margin: 0;
+	padding: 8px 8px 12px;
+	position: relative;
+	text-align: center;
+	text-decoration: none;
+	transition: all var(--transition);
+
+	vertical-align: middle;
+
+	
+	&:hover, &:focus, &:active {
+		text-decoration: none;
+	}
+	@include bp(lg) {
+		border-radius: 16px;
+		font-size: 1.6rem;
+		padding: 12px 12px 16px;
+	}
+}
+
+@mixin screen-reader-text {
+	border: 0;
+	clip: rect(1px, 1px, 1px, 1px);
+	clip-path: inset(50%);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute !important;
+	width: 1px;
+	word-wrap: normal !important;
+	/* Many screen reader and browser combinations announce broken words as they would appear visually. */
+}
+
+@mixin placeholder {
+	color:#000000;
+	opacity:1;
+}
+
+@mixin object-fit {
+	object-fit: cover;
+	object-position: center;
+	width: 100%;
+}
+
+
+@mixin border-custom {
+	border-image-source: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='%23D18300FF' stroke-width='2' stroke-dasharray='18%2c 12' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+	border-image-slice: 1;
+	border-image-repeat: round;
+	border-image-width:1px 0 0; //uniquement border-top
+}

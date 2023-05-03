@@ -1,0 +1,210 @@
+@font-face {
+	font-family: 'Typewriter Condensed';
+	font-style: normal;
+	font-weight: 400;
+	src: local(''),
+		url('fonts/typewcond_regular.woff') format('woff')
+}
+
+@font-face {
+	font-family: 'Typewriter Condensed';
+	font-style: normal;
+	font-weight: 600;
+	src: local(''),
+		url('fonts/typewcond_demi.woff') format('woff')
+}
+
+@font-face {
+	font-family: 'Typewriter Condensed';
+	font-style: normal;
+	font-weight: 700;
+	src: local(''),
+		url('fonts/typewcond_bold.woff') format('woff')
+}
+
+@font-face {
+	font-family: 'Simple Handmade';
+	font-style: normal;
+	font-weight: 400;
+	src: local(''),
+		url('fonts/SimpleHandmade.woff') format('woff')
+}
+
+:root {
+	--padding-lien: 7px 12px;
+}
+
+
+html {
+	font-size: 62.5%;
+	/* 1rem = 10px */
+	--taille-texte: 1.6rem;
+	--font-texte: "Typewriter Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	--font-titre: "Simple Handmade", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+body,
+button,
+input,
+select,
+optgroup,
+textarea {
+	color: var(--texte); 
+	font-family:  "Typewriter Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-family: var(--font-texte);
+	font-size: 1.6rem; //si les variables css ne sont pas supportées
+	font-size: var(--wp--custom--typography--font-size--medium);
+	font-weight: 400;
+	line-height: 1.33;
+	-webkit-font-smoothing: antialiased;
+}
+
+::selection {
+	background: var(--wp--preset--color--citron-200);
+	color: var(--wp--preset--color--noir);
+}
+
+strong,
+b {
+	font-weight: 700;
+}
+
+em,
+i {
+	font-style: italic;
+}
+
+
+h1,
+.h1,
+h2,
+.h2
+{
+	color:var(--wp--preset--color--gray-800);
+	font-family: var(--font-titre);
+	padding: 0;
+	text-transform: uppercase;
+
+}
+
+h1,
+.h1 {
+	font-size: 6rem;
+	@supports(font-size: clamp(1rem,1vw,2rem)) {
+		font-size: var(--wp--custom--typography--font-size--colossal);
+	}
+	line-height: 1;
+	margin: 0;
+}
+
+h2,
+.h2 {
+	font-size: 3.2rem;
+	@supports(font-size: clamp(1rem,1vw,2rem)) {
+		font-size: var(--wp--custom--typography--font-size--gigantic);
+	}
+	line-height: 1.2; 
+	margin : 0 0 0.4rem;
+	margin-bottom: clamp(0.4rem,1.11rem,1.6rem);
+}
+
+h3,
+.h3 {
+	color:#272216;
+	font-size: 2.4rem;
+	@supports(font-size: clamp(1rem,1vw,2rem)) {
+		font-size: var(--wp--custom--typography--font-size--huge);
+	}
+	font-weight: 700;
+	line-height: 1.32;
+	margin: 0 0 0.4rem;
+	text-transform: uppercase;
+
+}
+
+
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+	color:var(--wp--preset--color--noir);
+	font-size: 1.6rem;
+	@supports(font-size: clamp(1rem,1vw,2rem)) {
+		font-size: var(--wp--custom--typography--font-size--large);
+	}
+	font-weight: 700;
+	line-height: 1.32;
+	margin: 0 0 0.4rem;
+}
+
+
+
+p {
+	margin:0 0 1em;
+}
+
+dfn,
+cite,
+em,
+i {
+	font-style: italic;
+}
+
+blockquote {
+	border-left: solid 5px var(--wp--preset--color--orange-main);
+	font-size: 1.2em;
+	margin: 0 0 1em;
+	padding: 5px 27px;
+
+	cite {
+		font-weight: 700;
+	}
+}
+
+mark,
+ins {
+	background: var(--wp--preset--color--citron-200);
+	text-decoration: none;
+}
+
+
+
+/*--------------------------------------------------------------
+# Accessibility
+--------------------------------------------------------------*/
+/* Text meant only for screen readers. */
+.screen-reader-text {
+	@include screen-reader-text;
+}
+
+.screen-reader-text:focus {
+	background-color: var(--fond);
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	clip: auto !important;
+	clip-path: none;
+	display: block;
+	font-weight: bold;
+	height: auto;
+	left: 5px;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	top: 5px;
+	width: auto;
+	z-index: 100000;
+	/* Above WP toolbar. */
+}
+
+/* Do not show the outline on the skip link target. */
+#content[tabindex="-1"]:focus {
+	outline: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	* {
+		animation-duration: 0s !important;
+		transition-duration: 0s !important;
+	}
+}

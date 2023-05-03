@@ -1,0 +1,167 @@
+
+
+/*--------------------------------------------------------------
+# Layout
+--------------------------------------------------------------*/
+
+
+body {
+	margin:0; //ios 12 et 13
+	overflow-x:hidden;
+}
+:root {
+	--margin-y-1: 3rem;
+	--margin-y-2: 6rem;
+	--padding-x:1.6rem;
+	--padding-x-pleine-largeur:0;
+	--padding-x-single:var(--padding-x);
+	--largeur-max:1920px;
+
+	--header-height:6rem;
+	//--max-width-xl:1900px;
+
+	/*Valeurs en dur pour les navigateurs qui ne supportent pas clamp*/
+	--hauteur-banniere :400px; 
+	
+	@supports(height:clamp(276px,43vw,620px)) {
+		--hauteur-banniere :clamp(276px,43vw,620px);
+	}
+
+	@include bp(sm) {
+		--padding-x : 4.3vw;
+	}
+	
+	@include bp(lg) {
+		--padding-x : 5.56vw;
+		--padding-x-single:9.44vw
+	}
+	
+	@include bp(xl) {
+		--padding-x: calc((100vw - 100rem - 28rem )/2);
+		--padding-x-single: calc((100vw - 88.8rem - 28rem )/2);
+	}
+
+	@include bp(xxl) {
+		--padding-x: calc((var(--largeur-max) - 100rem - 28rem )/2);
+		--padding-x-single: calc((var(--largeur-max) - 88.8rem - 28rem )/2);
+		--padding-x-pleine-largeur : calc(50vw - var(--largeur-max)/2);
+	}
+}
+
+//Réglages de largeur communs à tous les templates
+.site-container {
+	@include largeur-max;
+
+	.site-main {
+		padding-bottom: 2.4rem;
+	}
+
+	.entry-content {
+		padding-top: 2.4rem;
+	}
+
+	@include bp(lg) {
+		display: grid;
+		grid-template-columns: 28rem 1fr;
+
+		.site-main {
+			padding-bottom: 8rem;
+		}
+
+		.entry-content {
+			padding-top: 4rem;
+		}
+		.site-header {
+			grid-row: 1 / span 2;
+		}
+		.site-footer {
+			grid-column: 2;
+		}
+
+	}
+}
+.site-main {
+	.fil-ariane, .entry-title {
+		padding-left: var(--padding-x);
+		padding-right: var(--padding-x);
+	}
+}
+
+
+body .entry-content {
+	padding: 0 var(--padding-x) 1px;
+}
+
+.home .site-container {
+	.entry-content {
+		padding-top:0;
+	}
+}
+
+@include bp(xxl) {
+	.entry-content {
+		max-width: 164rem;
+	}
+}
+
+
+.alignfull , .bleed-container {
+	@include bleed;
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.container {
+	padding:0 var(--padding-x);
+}
+
+/* Hauteur mini main*/
+
+.site {
+	overflow-x: hidden;
+	position: relative;
+}
+.site-main {
+	min-height:50vh;
+}
+
+
+.show-for-md,
+.show-for-lg {
+	display: none;
+}
+
+@include bp(md) {
+
+
+	.show-for-md {
+		display: initial;
+	}
+
+	.hide-for-md {
+		display: none;
+	}
+}
+
+@include bp(lg) {
+
+
+	.show-for-lg {
+		display: initial;
+	}
+
+	.hide-for-lg {
+		display: none;
+	}
+}
+
+
+
+/* Echelle z-index 
+Elements qui ont juste besoin d'être au-dessus de leur voisin : 1
+Overlay : 5
+Sticky header : 10
+Menu mobile : 10
+Sous-menu desktop : 10;
+
+*/

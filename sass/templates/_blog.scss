@@ -1,0 +1,13 @@
+.blog {
+	.loop {
+		--nb-col:1;
+		justify-content: center;
+		@include bp(sm) {
+			--nb-col:2;
+			--largeur-vignette: 1fr;
+		}
+		@include bp(md) {
+			--nb-col:3;
+		}
+	}
+}

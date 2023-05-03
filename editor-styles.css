@@ -1,0 +1,14 @@
+/*@import "base/typography";*/
+/*@import "base/normalize";
+@import "base/utilities";
+@import "base/layout";
+@import "base/elements";
+@import "base/boutons"; */
+.block-list-appender button, button.acf-button, .wp-editor-tabs button {
+  min-width: unset;
+  padding: unset;
+}
+.block-list-appender button, .block-list-appender button:hover, .block-list-appender button:focus, button.acf-button, button.acf-button:hover, button.acf-button:focus, .wp-editor-tabs button, .wp-editor-tabs button:hover, .wp-editor-tabs button:focus {
+  background-color: transparent;
+}
+/*# sourceMappingURL=editor-styles.css.map */
