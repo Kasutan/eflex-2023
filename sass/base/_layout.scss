@@ -12,11 +12,14 @@ body {
 :root {
 	--padding-x:2.3rem;
 	--hauteur-banniere :250px; 
-	--largeur-max:1800px;
+	--largeur-max:1800px; //doit correspondre à bp xxl
 
 	@include bp(lg) {
 		--padding-x : calc((100vw - 98.8rem )/2);
 		--hauteur-banniere :480px; 
+	}
+	@include bp(xxl) {
+		--padding-x : calc((var(--largeur-max) - 98.8rem )/2);
 	}
 
 }

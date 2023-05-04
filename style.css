@@ -291,6 +291,11 @@ body {
     --hauteur-banniere:480px;
   }
 }
+@media (min-width: 1800px) {
+  :root {
+    --padding-x: calc((var(--largeur-max) - 98.8rem )/2);
+  }
+}
 
 .site-container {
   max-width: var(--largeur-max);
@@ -318,7 +323,7 @@ body.home .entry-content {
   padding-left: 0;
   padding-right: 0;
 }
-@media (min-width: 1920px) {
+@media (min-width: 1800px) {
   .alignfull, .bleed-container {
     width: var(--largeur-max);
   }
