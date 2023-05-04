@@ -142,7 +142,6 @@ function kasutan_scripts() {
 		wp_enqueue_script( 'jquery' );
 	}
 
-	wp_enqueue_script( 'eflex-navigation', get_template_directory_uri() . '/js/min/navigation.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'eflex-skip-link-focus-fix', get_template_directory_uri() . '/js/min/skip-link-focus-fix.js', array(), '20151215', true );
 
