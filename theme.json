@@ -189,10 +189,10 @@
 		"elements": {
 			"button": {
 				"border": {
-					"radius": "8px"
+					"radius": "2px"
 				},
 				"color": {
-					"background": "var(--wp--preset--color--orange-main)",
+					"background": "var(--wp--preset--color--cyan-ad)",
 					"text": "var(--wp--preset--color--blanc)"
 				}
 			}
