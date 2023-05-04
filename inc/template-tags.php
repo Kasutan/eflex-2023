@@ -81,7 +81,7 @@ function ea_post_summary_image( $size = 'thumbnail' ) {
 
 
 /**
-* Banniere contenant une image, le titre de la page et un lien retour vers la home
+* Banniere contenant une image et le titre de la page
 *
 */
 function kasutan_page_banniere() {
@@ -101,24 +101,19 @@ function kasutan_page_banniere() {
 	}
 
 	if(is_front_page(  )) {
-		printf('<h1 class="screen-reader-text">%s</h1>',$titre);
+		//printf('<h1 class="screen-reader-text">%s</h1>',$titre);
+		//TODO prévoir balise h1 dans le bloc home hero
 		return;
 	}
 
 	if(!function_exists('get_field')) {
-		echo '<a href="/" class="retour"><span aria-hidden="true">&lt;</span> Retour</a>';
 		printf('<h1>%s</h1>',$titre);
 		return;
 	}
 
 
 	$image_id=esc_attr(get_field('banniere'));
-	$opacity=intval(esc_attr(get_field('banniere_opacite')));
-	if(!$opacity) {
-		$opacity='60'; //defaut
-	}
-	$opacity=$opacity / 100;
-	$style_filtre=sprintf('style="opacity:%s"',$opacity);
+	
 	
 
 	if(!$image_id) {
@@ -129,16 +124,10 @@ function kasutan_page_banniere() {
 		printf('<div class="page-banniere">');
 			echo wp_get_attachment_image( $image_id, 'banniere',false,array('decoding'=>'async','loading'=>'eager'));
 
-			//Filtre dont l'opacité vient d'une option de la publication
-			printf('<div class="filtre" %s></div>',$style_filtre);
-
-			echo '<a href="/" class="retour"><span aria-hidden="true">&lt;</span> Retour</a>';
-
 			printf('<h1 class="titre-banniere">%s</h1>',$titre);
 
 		echo '</div>';
 	} else {
-		echo '<a href="/" class="retour"><span aria-hidden="true">&lt;</span> Retour</a>';
 		printf('<h1>%s</h1>',$titre);
 	}
 }
