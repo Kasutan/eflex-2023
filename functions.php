@@ -62,8 +62,8 @@ if ( ! function_exists( 'kasutan_setup' ) ) :
 		add_theme_support( 'post-thumbnails', array('post','page','jobs'));
 
 		register_nav_menus( array(
-			'primary' => 'Menu principal en-tête',
-			'footer-liens' => 'Liens du pied de page (en plus des réseaux sociaux)',
+			'primary' => 'Buttons in header',
+			'footer-liens' => 'Footer links',
 		) );
 
 
