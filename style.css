@@ -1197,14 +1197,6 @@ a:focus-visible {
     top: unset;
   }
 }
-.admin-bar .site-inner {
-  margin-top: 46px;
-}
-@media (min-width: 768px) {
-  .admin-bar .site-inner {
-    margin-top: unset;
-  }
-}
 
 .site-header {
   --taille-logo:10rem;
@@ -1241,7 +1233,6 @@ a:focus-visible {
 ## Entry-header
 --------------------------------------------------------------*/
 .page-banniere {
-  --padding-top:3.4rem;
   align-items: center;
   display: flex;
   height: var(--hauteur-banniere);
@@ -1249,10 +1240,9 @@ a:focus-visible {
   overflow: hidden;
   margin: 0 auto;
   position: relative;
-  padding: var(--padding-top) var(--padding-x);
+  padding: var(--header-height) var(--padding-x) 0;
   max-width: var(--largeur-max);
   width: 100%;
-  --trait:8rem;
 }
 .page-banniere img {
   height: 100%;
@@ -1261,65 +1251,34 @@ a:focus-visible {
   top: 0;
   width: 100%;
 }
-.page-banniere .filtre {
-  background-color: #000;
-  height: 100%;
-  left: 0;
-  opacity: 0.6;
-  position: absolute;
-  top: 0;
-  width: 100%;
-}
-.page-banniere .titre-banniere, .page-banniere .retour {
-  color: var(--wp--preset--color--blanc);
-  position: relative;
-}
-.page-banniere a.retour {
-  font-size: 1.6rem;
-  font-weight: 400;
-  left: var(--padding-x);
-  position: absolute;
-  text-decoration: none;
-  text-transform: uppercase;
-  top: var(--padding-top);
-}
 .page-banniere .titre-banniere {
+  --largeur-trait:7rem;
+  --top-trait:1rem;
+  --ep-trait:2px;
+  color: var(--wp--preset--color--blanc);
+  margin-bottom: calc(var(--ep-trait) + var(--top-trait));
+  position: relative;
   text-align: center;
 }
-@media (min-width: 500px) {
-  .page-banniere {
-    --trait:21vw;
-  }
-}
 @media (min-width: 1024px) {
-  .page-banniere {
-    --trait:27.7rem;
-  }
-  .page-banniere a.retour {
-    font-size: 2.4rem;
-    top: 5rem;
+  .page-banniere .titre-banniere {
+    --largeur-trait:10rem;
+    --top-trait:3rem;
+    --ep-trait:4px;
   }
 }
-@media (min-width: 1600px) {
-  .page-banniere {
-    --trait:40rem;
-  }
-}
-.page-banniere::after {
-  background-color: var(--wp--preset--color--orange-main);
-  bottom: 0;
-  content: " ";
-  height: 6px;
-  left: calc((100% - var(--trait)) / 2);
-  position: absolute;
-  width: var(--trait);
+.page-banniere .titre-banniere::after {
+  background-color: var(--wp--preset--color--blanc);
+  border-radius: 100px;
+  content: "";
+  display: block;
+  height: var(--ep-trait);
+  left: calc((100% - var(--largeur-trait)) / 2);
+  position: relative;
+  top: var(--top-trait);
+  width: var(--largeur-trait);
 }
 
-@media (min-width: 1024px) {
-  .banniere-reduite .page-banniere {
-    height: 31.5rem;
-  }
-}
 .entry-title {
   text-align: center;
 }
