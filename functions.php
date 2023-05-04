@@ -16,7 +16,6 @@ include_once( get_template_directory() . '/inc/wordpress-cleanup.php' );
 // Theme
 include_once( get_template_directory() . '/inc/tha-theme-hooks.php' );
 include_once( get_template_directory() . '/inc/helper-functions.php' );
-include_once( get_template_directory() . '/inc/navigation.php' );
 include_once( get_template_directory() . '/inc/loop.php' );
 include_once( get_template_directory() . '/inc/template-tags.php' );
 include_once( get_template_directory() . '/inc/site-header.php' );
