@@ -121,7 +121,12 @@ if ( ! function_exists( 'kasutan_setup' ) ) :
 endif;
 add_action( 'after_setup_theme', 'kasutan_setup' );
 
-
+//https://stackoverflow.com/questions/69800090/deregister-admin-editor-reset-styles-with-the-handle-of-wp-reset-editor-styles
+add_action( 'enqueue_block_editor_assets', 'kasutan_enqueue_block_editor_assets', 102);
+function kasutan_enqueue_block_editor_assets () {
+	wp_deregister_style('wp-reset-editor-styles');
+	wp_register_style( 'wp-reset-editor-styles', get_stylesheet_directory_uri() . '/editor-styles.css', false, '1.0', 'all' );
+}
 
 /**
  * Enqueue scripts and styles.
