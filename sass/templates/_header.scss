@@ -1,101 +1,56 @@
 /*--------------------------------------------------------------
 ## Site header
 --------------------------------------------------------------*/
+//header toujours sticky
 .site-header {
-	background-color: var(--wp--preset--color--sand-main);
-	position: relative;
-	z-index: 10;
-}
-.inner-header {
-	--taille-logo:3.3rem;
-	
-	align-items: center;
-	display: flex;
-	height:var(--header-height);
-	padding: 8px 18px;
-	position: relative;
-	
-
-	a.resa.mobile {
-		line-height: 1;
-		margin-bottom: 0;
-		margin-right: 32px;
-	}
-	.menu-toggle {
-		position: relative;
-	}
-
-	
-
-	@include bp(md) {
-	}
-	@include bp(lg) {
-		--taille-logo:8rem;
-		flex-direction: column;
-		height:auto;
-		padding:16px 0;
-		a.resa.mobile {
-			display: none;
-		}
-
-		.logo-header {
-			flex-basis:unset;
-			margin-left: auto;
-			margin-right: auto;
-			margin-bottom: 32px;
-			max-width:var(--taille-logo);
-			position:relative;
-			left:-12px;
-		}
-
-	}
-
-}
-.site-header.volet-ouvert {
-	a.resa.mobile {
-		display: none;
-	}
-}
-	
-
-.logo-header {
-	flex:0 0 var(--taille-logo);
-	margin-right: auto;
-}
-
-
-//Header fixe en haut de page en mobile
-.site-header.js-fixed {
-	//box-shadow: 0 3px 3px rgba(18,75,90,0.2);
-	position:fixed;
+	background-color: #fff;
+	position:fixed; 
 	left: 0;
 	top: 0;
 	width:100%;
-
-	@include bp(lg) {
-		position:relative;
-		width: unset;
-		top:unset;
-	}
+	z-index: 10;
 }
+
 
 #wpadminbar {
 	position: fixed;
 }
-.admin-bar .site-header.js-fixed {
-	top:46px;
-	@include bp(md) {
-		top:unset;
+.admin-bar{
+	.site-header  {
+		top:46px;
+		@include bp(md) {
+			top:unset;
+		}
+	}
+	.site-inner {
+		margin-top: 46px;
+		@include bp(md) {
+			margin-top:unset;
+		}
 	}
 }
 
-//Header sticky à gauche en desktop
-@include bp(lg) {
-	.inner-header {
-		padding-bottom: 10rem;
-		position:sticky;
-		top:5rem;
+//Layout du header
+
+.site-header {
+	--taille-logo:10rem;
+	
+	align-items: center;
+	display: flex;
+	justify-content: space-between;
+	padding-left: 1.7rem;
+
+	@include bp(lg) {
+		--taille-logo:14.9rem;
+		padding-left: 2.8rem;
+
 	}
+
+}
+
+.logo-header {
+	flex:0 0 var(--taille-logo);
+	margin-right: auto;
 }
 
 
