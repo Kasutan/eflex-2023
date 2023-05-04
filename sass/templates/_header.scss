@@ -5,10 +5,17 @@
 .site-header {
 	background-color: #fff;
 	position:fixed; 
+	height:var(--header-height);
 	left: 0;
 	top: 0;
 	width:100%;
 	z-index: 10;
+
+	@include largeur-max;
+
+	@include bp(xxl) {
+		left:calc((100vw - var(--largeur-max)) / 2);
+	}
 }
 
 

@@ -284,11 +284,13 @@ body {
   --padding-x:2.3rem;
   --hauteur-banniere:250px;
   --largeur-max:1800px;
+  --header-height:6rem;
 }
 @media (min-width: 1024px) {
   :root {
     --padding-x: calc((100vw - 98.8rem )/2);
     --hauteur-banniere:480px;
+    --header-height:7rem;
   }
 }
 @media (min-width: 1800px) {
@@ -1108,6 +1110,44 @@ a:focus-visible {
     font-size: 1.8rem;
   }
 }
+/*--------------------------------------------------------------
+## Language switcher
+--------------------------------------------------------------*/
+.wpml-ls-statics-shortcode_actions.wpml-ls-legacy-list-horizontal {
+  align-items: center;
+  background-color: var(--wp--preset--color--gris-eb);
+  border: none;
+  display: flex;
+  font-family: var(--font-poppins);
+  height: var(--header-height);
+  padding: 0 2.3rem;
+}
+@media (min-width: 1024px) {
+  .wpml-ls-statics-shortcode_actions.wpml-ls-legacy-list-horizontal {
+    font-size: 2.2rem;
+    padding: 0 2rem;
+  }
+}
+.wpml-ls-statics-shortcode_actions.wpml-ls-legacy-list-horizontal ul {
+  display: flex;
+  align-items: center;
+}
+.wpml-ls-statics-shortcode_actions.wpml-ls-legacy-list-horizontal li {
+  color: var(--wp--preset--color--cyan-ad);
+}
+.wpml-ls-statics-shortcode_actions.wpml-ls-legacy-list-horizontal li.wpml-ls-current-language {
+  color: var(--wp--preset--color--noir);
+}
+.wpml-ls-statics-shortcode_actions.wpml-ls-legacy-list-horizontal li.wpml-ls-first-item {
+  border-right: solid 3px var(--wp--preset--color--noir);
+  margin-right: 1ch;
+  padding-right: 1ch;
+}
+.wpml-ls-statics-shortcode_actions.wpml-ls-legacy-list-horizontal a {
+  color: inherit;
+  padding: 0;
+}
+
 @media print {
   .topbar,
   .main-navigation,
@@ -1130,10 +1170,19 @@ a:focus-visible {
 .site-header {
   background-color: #fff;
   position: fixed;
+  height: var(--header-height);
   left: 0;
   top: 0;
   width: 100%;
   z-index: 10;
+  max-width: var(--largeur-max);
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (min-width: 1800px) {
+  .site-header {
+    left: calc((100vw - var(--largeur-max)) / 2);
+  }
 }
 
 #wpadminbar {

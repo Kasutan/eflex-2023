@@ -59,3 +59,43 @@ a:focus-visible {
 		}
 	}
 }
+
+/*--------------------------------------------------------------
+## Language switcher
+--------------------------------------------------------------*/
+.wpml-ls-statics-shortcode_actions.wpml-ls-legacy-list-horizontal {
+	align-items: center;
+	background-color: var(--wp--preset--color--gris-eb);
+	border:none;
+	display: flex ;
+	font-family: var(--font-poppins);
+	height:var(--header-height);
+	padding:0 2.3rem;
+
+	@include bp(lg) {
+		font-size: 2.2rem;
+		padding:0 2rem;
+	}
+
+	ul {
+		display: flex;
+		align-items: center;
+	}
+
+	li {
+		color:var(--wp--preset--color--cyan-ad);
+		&.wpml-ls-current-language {
+			color:var(--wp--preset--color--noir);
+		}
+		&.wpml-ls-first-item {
+			border-right:solid 3px var(--wp--preset--color--noir);
+			margin-right: 1ch;
+			padding-right:1ch;
+		}
+	}
+	
+	a {
+		color:inherit;
+		padding:0;
+	}
+}
