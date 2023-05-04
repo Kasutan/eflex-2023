@@ -10,42 +10,15 @@ body {
 	overflow-x:hidden;
 }
 :root {
-	--margin-y-1: 3rem;
-	--margin-y-2: 6rem;
-	--padding-x:1.6rem;
-	--padding-x-pleine-largeur:0;
-	--padding-x-single:var(--padding-x);
-	--largeur-max:1920px;
+	--padding-x:2.3rem;
+	--hauteur-banniere :250px; 
+	--largeur-max:1800px;
 
-	--header-height:6rem;
-	//--max-width-xl:1900px;
-
-	/*Valeurs en dur pour les navigateurs qui ne supportent pas clamp*/
-	--hauteur-banniere :400px; 
-	
-	@supports(height:clamp(276px,43vw,620px)) {
-		--hauteur-banniere :clamp(276px,43vw,620px);
-	}
-
-	@include bp(sm) {
-		--padding-x : 4.3vw;
-	}
-	
 	@include bp(lg) {
-		--padding-x : 5.56vw;
-		--padding-x-single:9.44vw
-	}
-	
-	@include bp(xl) {
-		--padding-x: calc((100vw - 100rem - 28rem )/2);
-		--padding-x-single: calc((100vw - 88.8rem - 28rem )/2);
+		--padding-x : calc((100vw - 98.8rem )/2);
+		--hauteur-banniere :480px; 
 	}
 
-	@include bp(xxl) {
-		--padding-x: calc((var(--largeur-max) - 100rem - 28rem )/2);
-		--padding-x-single: calc((var(--largeur-max) - 88.8rem - 28rem )/2);
-		--padding-x-pleine-largeur : calc(50vw - var(--largeur-max)/2);
-	}
 }
 
 //Réglages de largeur communs à tous les templates
@@ -61,47 +34,19 @@ body {
 	}
 
 	@include bp(lg) {
-		display: grid;
-		grid-template-columns: 28rem 1fr;
-
-		.site-main {
-			padding-bottom: 8rem;
-		}
-
-		.entry-content {
-			padding-top: 4rem;
-		}
-		.site-header {
-			grid-row: 1 / span 2;
-		}
-		.site-footer {
-			grid-column: 2;
-		}
+		
 
 	}
 }
-.site-main {
-	.fil-ariane, .entry-title {
-		padding-left: var(--padding-x);
-		padding-right: var(--padding-x);
-	}
-}
+
 
 
 body .entry-content {
 	padding: 0 var(--padding-x) 1px;
 }
 
-.home .site-container {
-	.entry-content {
-		padding-top:0;
-	}
-}
-
-@include bp(xxl) {
-	.entry-content {
-		max-width: 164rem;
-	}
+body.home .entry-content {
+	padding: 0;
 }
 
 

@@ -2,8 +2,8 @@
 @mixin bp($point) {
 	$sm: "(min-width: 500px)";
 	$md: "(min-width: 768px)";
-	$lg: "(min-width: 960px)";
-	$xl: "(min-width: 1440px)";
+	$lg: "(min-width: 1024px)";
+	$xl: "(min-width: 1600px)";
 	$xxl: "(min-width: 1920px)";
   
 	@if $point == sm {
@@ -26,13 +26,6 @@
 		}
 }
 
-@mixin fs($px) {
-	font-size:calc(#{$px} * var(--taille-texte) / 15);
-}
-
-@mixin box-shadow {
-	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
 
 @mixin bleed {
 	width: 100vw;
