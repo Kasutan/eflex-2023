@@ -12,118 +12,58 @@
 			"defaultGradients": false,
 			"palette": [
 				{
-					"slug": "orange-800",
-					"color": "#C74E08",
-					"name": "Orange 800"
+					"slug": "cyan-e1",
+					"color": "#08DDE1",
+					"name": "Cyan E1"
+				},	
+				{
+					"slug": "cyan-c2",
+					"color": "#03BEC2",
+					"name": "Cyan C2"
+				},	
+				{
+					"slug": "cyan-ad",
+					"color": "#00AAAD",
+					"name": "Cyan AD"
 				},
 				{
-					"slug": "orange-400",
-					"color": "#EF773B",
-					"name": "Orange 400"
+					"slug": "jaune",
+					"color": "#FFCB08",
+					"name": "Jaune"
 				},
 				{
-					"slug": "orange-main",
-					"color": "#EF773B",
-					"name": "Orange main"
+					"slug": "gris-f700",
+					"color": "#F7F7F700",
+					"name": "Gris F700"
 				},
 				{
-					"slug": "orange-200",
-					"color": "#F6AD8D",
-					"name": "Orange 200"
+					"slug": "gris-f7",
+					"color": "#F7F7F7",
+					"name": "Gris F7"
 				},
 				{
-					"slug": "orange-50",
-					"color": "#F9E9E6",
-					"name": "Orange 50"
+					"slug": "gris-eb",
+					"color": "##EBEBEB",
+					"name": "Gris EB"
 				},
 				{
-					"slug": "jaune-800",
-					"color": "#E98F00",
-					"name": "Jaune 800"
+					"slug": "gris-e2",
+					"color": "#E2E2E2",
+					"name": "Gris E2"
 				},
 				{
-					"slug": "jaune-600",
-					"color": "#E7B200",
-					"name": "Jaune 600"
+					"slug": "gris-e9",
+					"color": "#E9E9E9",
+					"name": "Gris E9"
 				},
 				{
-					"slug": "jaune-400",
-					"color": "#E8C823",
-					"name": "Jaune 400"
-				},
-				{
-					"slug": "jaune-main",
-					"color": "#F5EBB4",
-					"name": "Jaune main"
-				},
-				{
-					"slug": "sand-900",
-					"color": "#BD4E00",
-					"name": "Sand 900"
-				},
-				{
-					"slug": "sand-600",
-					"color": "#D18300",
-					"name": "Sand 600"
-				},
-				{
-					"slug": "sand-main",
-					"color": "#E5C57F",
-					"name": "Sand main"
-				},
-				{
-					"slug": "sand-50",
-					"color": "#F8F1E0",
-					"name": "Sand 50"
-				},
-				{
-					"slug": "citron-800",
-					"color": "#F8A32A",
-					"name": "Citron 800"
-				},
-				{
-					"slug": "citron-500",
-					"color": "#FDE238",
-					"name": "Citron 500"
-				},
-				{
-					"slug": "citron-200",
-					"color": "#FFF29E",
-					"name": "Citron 200"
-				},
-				{
-					"slug": "citron-main",
-					"color": "#FFFCE9 ",
-					"name": "Citron main"
-				},
-				{
-					"slug": "marron-main",
-					"color": "#9E733A",
-					"name": "Marron main"
-				},
-				{
-					"slug": "marron-100",
-					"color": "#FFF0C7",
-					"name": "Marron 100"
-				},
-				{
-					"slug": "gray-900",
-					"color": "#0E0710",
-					"name": "Gray 900"
-				},
-				{
-					"slug": "gray-800",
-					"color": "#2E2A30",
-					"name": "Gray 800"
-				},
-				{
-					"slug": "gray-400",
-					"color": "#A7A2A9",
-					"name": "Gray 400"
+					"slug": "gris-ee",
+					"color": "#EEEEEE",
+					"name": "Gris EE"
 				},
 				{
 					"slug": "noir",
-					"color": "#000",
+					"color": "#231F20",
 					"name": "Noir"
 				},
 				{
@@ -142,12 +82,12 @@
 			},
 			"typography": {
 				"font-size": {
-					"small": "1.2rem",
-					"medium": "clamp(1.2rem, 1.11vw, 1.6rem)",
-					"large": "clamp(1.6rem, 1.67vw, 2.4rem)",
-					"huge": "clamp(2.4rem, 2.77vw, 4rem)",
-					"gigantic": "clamp(3.2rem, 5.6vw, 8.08rem)",
-					"colossal": "clamp(6rem, 8.9vw, 12.9rem)"
+					"small": "1.8rem",
+					"medium": "2rem",
+					"large": "2.6rem",
+					"huge": "3rem",
+					"gigantic": "4rem",
+					"colossal": "5.rem"
 				},
 				"line-height": {
 					"tiny": 1.15,
@@ -264,7 +204,7 @@
 		"typography": {
 			"fontFamily": "var(--wp--preset--font-family--system-font)",
 			"lineHeight": "var(--wp--custom--typography--line-height--normal)",
-			"fontSize": "var(--wp--preset--font-size--medium)"
+			"fontSize": "var(--wp--preset--font-size--small)"
 		}
 	},
 	"customTemplates": [],

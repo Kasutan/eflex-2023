@@ -1,34 +1,43 @@
+/* lato-regular - latin */
 @font-face {
-	font-family: 'Typewriter Condensed';
+	font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+	font-family: 'Lato';
 	font-style: normal;
 	font-weight: 400;
-	src: local(''),
-		url('fonts/typewcond_regular.woff') format('woff')
+	src: url('fonts/lato-v23-latin-regular.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+ */
+		url('fonts/lato-v23-latin-regular.woff') format('woff'); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+	
+/* lato-700 - latin */
+@font-face {
+font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+font-family: 'Lato';
+font-style: normal;
+font-weight: 700;
+src: url('fonts/lato-v23-latin-700.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+ */
+	url('fonts/lato-v23-latin-700.woff') format('woff'); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
+/* poppins-regular - latin */
 @font-face {
-	font-family: 'Typewriter Condensed';
+	font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+	font-family: 'Poppins';
 	font-style: normal;
-	font-weight: 600;
-	src: local(''),
-		url('fonts/typewcond_demi.woff') format('woff')
+	font-weight: 400;
+	src: url('fonts/poppins-v20-latin-regular.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+ */
+		url('fonts/poppins-v20-latin-regular.woff') format('woff'); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
+/* poppins-700 - latin */
 @font-face {
-	font-family: 'Typewriter Condensed';
+	font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+	font-family: 'Poppins';
 	font-style: normal;
 	font-weight: 700;
-	src: local(''),
-		url('fonts/typewcond_bold.woff') format('woff')
+	src: url('fonts/poppins-v20-latin-700.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+ */
+	url('fonts/poppins-v20-latin-		700.woff') format('woff'); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
-
-@font-face {
-	font-family: 'Simple Handmade';
-	font-style: normal;
-	font-weight: 400;
-	src: local(''),
-		url('fonts/SimpleHandmade.woff') format('woff')
-}
+	
 
 :root {
 	--padding-lien: 7px 12px;
@@ -38,9 +47,9 @@
 html {
 	font-size: 62.5%;
 	/* 1rem = 10px */
-	--taille-texte: 1.6rem;
-	--font-texte: "Typewriter Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
-	--font-titre: "Simple Handmade", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	--taille-texte: 2rem;
+	--font-lato: "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	--font-poppins: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 body,
@@ -49,13 +58,15 @@ input,
 select,
 optgroup,
 textarea {
-	color: var(--texte); 
+	color: var(--wp--preset--color--noir); 
 	font-family:  "Typewriter Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
-	font-family: var(--font-texte);
-	font-size: 1.6rem; //si les variables css ne sont pas supportées
-	font-size: var(--wp--custom--typography--font-size--medium);
-	font-weight: 400;
-	line-height: 1.33;
+	font-family: var(--font-lato);
+	font-size: 1.8rem; 
+	@include bp(lg) {
+		font-size:2rem;
+	}
+	font-weight: 700;
+	line-height: 1.4;
 	-webkit-font-smoothing: antialiased;
 }
 
@@ -66,6 +77,7 @@ textarea {
 
 strong,
 b {
+	color:var(--wp--preset--color--cyan-ad);
 	font-weight: 700;
 }
 
@@ -80,65 +92,36 @@ h1,
 h2,
 .h2
 {
-	color:var(--wp--preset--color--gray-800);
-	font-family: var(--font-titre);
-	padding: 0;
-	text-transform: uppercase;
-
+	font-family: var(--font-lato);
+	font-weight: 700;
 }
 
 h1,
 .h1 {
-	font-size: 6rem;
-	@supports(font-size: clamp(1rem,1vw,2rem)) {
-		font-size: var(--wp--custom--typography--font-size--colossal);
-	}
-	line-height: 1;
+	color: var(--wp--preset--color--noir); 
+	text-transform: uppercase;
+	font-size: 4rem;
+	line-height: 1.07;
 	margin: 0;
+
+	@include bp(md) {
+		font-size:5rem;
+	}
+	@include bp(lg) {
+		font-size:5.6rem;
+	}
 }
 
 h2,
 .h2 {
-	font-size: 3.2rem;
-	@supports(font-size: clamp(1rem,1vw,2rem)) {
-		font-size: var(--wp--custom--typography--font-size--gigantic);
-	}
-	line-height: 1.2; 
-	margin : 0 0 0.4rem;
-	margin-bottom: clamp(0.4rem,1.11rem,1.6rem);
+	color:var(--wp--preset--color--cyan-ad); 
+	font-size: 3rem;
+	line-height: 4.2rem; 
+	margin : 3.6rem 0;
 }
-
-h3,
-.h3 {
-	color:#272216;
-	font-size: 2.4rem;
-	@supports(font-size: clamp(1rem,1vw,2rem)) {
-		font-size: var(--wp--custom--typography--font-size--huge);
-	}
-	font-weight: 700;
-	line-height: 1.32;
-	margin: 0 0 0.4rem;
-	text-transform: uppercase;
-
+.h2-poppins {
+	font-family: var(--font-poppins);
 }
-
-
-h4,
-.h4,
-h5,
-.h5,
-h6,
-.h6 {
-	color:var(--wp--preset--color--noir);
-	font-size: 1.6rem;
-	@supports(font-size: clamp(1rem,1vw,2rem)) {
-		font-size: var(--wp--custom--typography--font-size--large);
-	}
-	font-weight: 700;
-	line-height: 1.32;
-	margin: 0 0 0.4rem;
-}
-
 
 
 p {
@@ -152,16 +135,6 @@ i {
 	font-style: italic;
 }
 
-blockquote {
-	border-left: solid 5px var(--wp--preset--color--orange-main);
-	font-size: 1.2em;
-	margin: 0 0 1em;
-	padding: 5px 27px;
-
-	cite {
-		font-weight: 700;
-	}
-}
 
 mark,
 ins {
