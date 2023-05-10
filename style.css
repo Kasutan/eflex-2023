@@ -1343,6 +1343,29 @@ a:focus-visible {
   }
 }
 
+.home-gris {
+  background: transparent linear-gradient(180deg, #fff 0%, #F7F7F7 100%) 0% 0% no-repeat padding-box;
+  padding: 4rem 2rem;
+}
+.home-gris p + p {
+  margin-top: 4rem;
+}
+@media (min-width: 768px) {
+  .home-gris p {
+    max-width: 80%;
+  }
+}
+@media (min-width: 1024px) {
+  .home-gris {
+    font-size: 3rem;
+    line-height: 4.2rem;
+    padding-bottom: 7rem;
+  }
+  .home-gris p {
+    max-width: 116rem;
+  }
+}
+
 .blog .loop {
   --nb-col:1;
   justify-content: center;

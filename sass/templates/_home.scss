@@ -1,0 +1,21 @@
+.home-gris {
+	background: transparent linear-gradient(180deg, #fff 0%, #F7F7F7 100%) 0% 0% no-repeat padding-box;
+	padding:4rem 2rem;
+	p + p {
+		margin-top: 4rem;
+	}
+	@include bp(md) {
+		p {
+			max-width: 80%;
+		}
+	}
+
+	@include bp(lg) {
+		font-size: 3rem;
+		line-height: 4.2rem;
+		padding-bottom: 7rem;
+		p {
+			max-width: calc(124rem - 8rem);
+		}
+	}
+}
