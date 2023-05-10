@@ -186,8 +186,8 @@ class BE_ACF_Customizations {
 		/*********Bloc home-logo ***************/
 		$this->helper_register_block_type( 
 			'home-logo',
-			'Bloc logo pour la Home',
-			'Section avec logo sur fond blanc.',
+			'Bloc bannière pour la Home',
+			'Section avec logo, titre SEO, texte et image bannière.',
 			'album', 
 			false, 
 			array( 'logo','accueil')

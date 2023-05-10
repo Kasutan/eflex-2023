@@ -101,8 +101,7 @@ function kasutan_page_banniere() {
 	}
 
 	if(is_front_page(  )) {
-		//printf('<h1 class="screen-reader-text">%s</h1>',$titre);
-		//TODO prévoir balise h1 dans le bloc home hero
+		//balise h1 dans le bloc home logo
 		return;
 	}
 

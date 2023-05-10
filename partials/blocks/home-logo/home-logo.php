@@ -15,11 +15,14 @@ if(array_key_exists('className',$block)) {
 
 
 $logo=esc_attr( get_field('logo') );
+$image=esc_attr( get_field('image') );
+$titre=wp_kses_post( get_field('titre') );
+$texte=wp_kses_post( get_field('texte') );
 
-if($logo) {
-	printf('<section class="acf home-logo %s">', $className);
-		if($logo) printf('<div class="image">%s</div>',wp_get_attachment_image( $logo, 'medium'),false,array('decoding'=>'async','loading'=>'eager'));
-	echo '</section>';
-}
-
-	
+printf('<section class="acf home-logo %s">', $className);
+	printf('<div class="image">%s</div>',wp_get_attachment_image( $image, 'banniere'),false,array('decoding'=>'async','loading'=>'eager'));
+	printf('<h1 class="screen-reader-text">%s</h1>',$titre);
+	printf('<div class="logo">%s</div>',wp_get_attachment_image( $logo, 'medium'));
+	echo '<div class="trait"></div>';
+	printf('<div class="texte">%s</div>',$texte);
+echo '</section>';

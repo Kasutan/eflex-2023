@@ -1,13 +1,81 @@
 .home-logo {
-  width: calc(100% + 2 * var(--padding-x));
-  transform: translateX(calc(-1 * var(--padding-x)));
+  align-items: center;
   display: flex;
+  flex-direction: column;
+  height: 72.3rem;
   justify-content: center;
-  padding: 1.6rem 0;
-  padding-top: clamp(1.6rem, 5.55vw, 8rem);
-  padding-bottom: clamp(1.6rem, 9vw, 13rem);
+  overflow: hidden;
+  margin: 0 auto;
+  position: relative;
+  padding: 0 var(--padding-x);
+  max-width: var(--largeur-max);
+  width: 100%;
+}
+.home-logo .texte, .home-logo .logo, .home-logo .trait {
+  color: var(--wp--preset--color--blanc);
+  position: relative;
 }
 .home-logo .image {
-  width: 24rem;
-  width: clamp(24rem, 30vw, 43rem);
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.home-logo .image img {
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+.home-logo .logo {
+  margin-bottom: 3.9rem;
+  width: 23rem;
+}
+.home-logo .trait {
+  background-color: #fff;
+  height: 0.6rem;
+  margin-bottom: 3.4rem;
+  width: 8.5rem;
+}
+.home-logo .texte {
+  font-size: 3rem;
+  line-height: 3.6rem;
+  font-weight: 700;
+  text-align: center;
+}
+.home-logo .texte br {
+  display: none;
+}
+@media (min-width: 1024px) {
+  .home-logo {
+    flex-direction: row;
+    padding-left: 10vw;
+    padding-right: 3vw;
+  }
+  .home-logo .logo {
+    flex: 0 0 30rem;
+    margin-bottom: 0;
+    margin-right: 5.1rem;
+    width: 30rem;
+  }
+  .home-logo .trait {
+    height: 26.2rem;
+    margin-bottom: 0;
+    margin-right: 4.7rem;
+    width: 0.6rem;
+  }
+  .home-logo .texte {
+    font-size: 4.8rem;
+    line-height: 6rem;
+    text-align: left;
+  }
+  .home-logo .texte br {
+    display: block;
+  }
+}
+@media (min-width: 1600px) {
+  .home-logo {
+    padding-left: 16rem;
+    padding-right: 4.8rem;
+  }
 }
