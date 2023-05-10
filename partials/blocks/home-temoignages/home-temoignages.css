@@ -1,0 +1,76 @@
+.home-temoignages {
+  background-image: url("dots-degrade.svg");
+  background-repeat: repeat-x;
+  padding: 3rem 2rem;
+}
+.home-temoignages .titre-section {
+  --largeur-trait:7rem;
+  --top-trait:1.9rem;
+  --ep-trait:2px;
+  color: var(--wp--preset--color--noir);
+  font-family: var(--font-poppins);
+  margin-bottom: 2.9rem;
+  padding-bottom: var(--top-trait);
+  text-align: center;
+  text-transform: uppercase;
+}
+.home-temoignages .titre-section::after {
+  background-color: var(--wp--preset--color--noir);
+  border-radius: 100px;
+  content: "";
+  display: block;
+  height: var(--ep-trait);
+  left: calc((100% - var(--largeur-trait)) / 2);
+  position: relative;
+  top: var(--top-trait);
+  width: var(--largeur-trait);
+}
+.home-temoignages .titre {
+  color: var(--wp--preset--color--cyan-ad);
+  display: block;
+  font-family: var(--font-poppins);
+  font-size: 2.2rem;
+  line-height: 3.3rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+.home-temoignages .texte {
+  display: block;
+  margin-bottom: 3.9rem;
+  text-align: center;
+}
+.home-temoignages .quotes {
+  --picto-w:3.8rem;
+  --picto-h:4rem;
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.1607843137);
+  border: 2px solid #E2E2E2;
+  border-radius: 30px;
+  margin-bottom: 6rem;
+  padding: 3.9rem 1.8rem 0.8rem 3.1rem;
+  position: relative;
+}
+.home-temoignages .quotes::after {
+  background-image: url("quote.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  content: "";
+  display: block;
+  height: var(--picto-h);
+  left: calc((100% - var(--picto-w)) / 2);
+  position: absolute;
+  top: calc(-0.5 * var(--picto-h));
+  width: var(--picto-w);
+}
+.home-temoignages blockquote {
+  color: var(--wp--preset--color--cyan-ad);
+  font-style: italic;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 2.2rem;
+  margin-bottom: 7px;
+}
+.home-temoignages .client {
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 2.2rem;
+}

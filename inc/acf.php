@@ -141,7 +141,7 @@ class BE_ACF_Customizations {
 		);
 	}
 
-	function helper_register_block_type($slug,$titre,$description,$icon='album',$js=false,$keywords=[], $multiple=true ){
+	function helper_register_block_type($slug,$titre,$description,$icon='dashboard',$js=false,$keywords=[], $multiple=true ){
 		$keywords_from_slug=explode('-',$slug);
 		$keywords=array_merge($keywords,$keywords_from_slug, array('eflex'));
 		$args=[
@@ -188,9 +188,19 @@ class BE_ACF_Customizations {
 			'home-logo',
 			'Bloc bannière pour la Home',
 			'Section avec logo, titre SEO, texte et image bannière.',
-			'album', 
+			'dashboard', 
 			false, 
 			array( 'logo','accueil')
+		);
+
+		/*********Bloc home-temoignages ***************/
+		$this->helper_register_block_type( 
+			'home-temoignages',
+			'Bloc témoignages pour la Home',
+			'Section avec titre principal, décors et 3 blocs de témoignages.',
+			'dashboard', 
+			false, 
+			array( 'temoignages','accueil')
 		);
 
 
