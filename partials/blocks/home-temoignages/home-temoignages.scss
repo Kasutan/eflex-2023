@@ -12,6 +12,7 @@
 		color:var(--wp--preset--color--noir);
 		font-family: var(--font-poppins);
 		margin-bottom: 2.9rem;
+		margin-top: 0;
 		padding-bottom: var(--top-trait);
 		text-align: center;
 		text-transform: uppercase;
@@ -27,6 +28,27 @@
 			top:var(--top-trait);
 			width:var(--largeur-trait);
 		}
+	}
+
+	.ligne {
+		--dots-w:19.4rem;
+		--dots-h:17.4rem;
+		position: relative;
+	}
+	.ligne::before {
+		background-image: url('dots-en-carre.svg');
+		background-repeat: repeat;
+		bottom:-3rem;
+		content:'';
+		display: block;
+		height:var(--dots-h);
+		position:absolute;
+		right:-2rem;
+		width:var(--dots-w);
+	}
+	.ligne:nth-of-type(2)::before {
+		left:-2rem;
+		right:unset;
 	}
 
 	.titre {
@@ -46,10 +68,12 @@
 	.quotes {
 		--picto-w:3.8rem;
 		--picto-h:4rem;
+		background-color: #fff;
 		box-shadow: 3px 3px 6px #00000029;
 		border: 2px solid #E2E2E2;
 		border-radius: 30px;
 		margin-bottom: 6rem;
+		overflow: visible;
 		padding:3.9rem 1.8rem 0.8rem 3.1rem;
 		position: relative;
 		&::after {
@@ -63,9 +87,9 @@
 			position:absolute;
 			top:calc(-0.5 * var(--picto-h));
 			width:var(--picto-w);
-
-			
 		}
+		
+	
 	}
 	blockquote {
 		color:var(--wp--preset--color--cyan-ad);
@@ -79,5 +103,120 @@
 		font-size: 1.6rem;
 		font-weight: 600;
 		line-height: 2.2rem;
+	}
+
+	
+
+	@include bp(lg) {
+		padding-left:0;
+		padding-right:0;
+		padding-top: 9rem;
+		.titre-section {
+			--largeur-trait:10rem;
+			--ep-trait:6px;
+			--top-trait:4rem;
+			font-size: 5.6rem;
+			line-height: 6rem;
+			margin-bottom: calc(9.5rem - var(--top-trait));
+		}
+		.ligne {
+			--dots-w:27.6rem;
+			--dots-h:24.7rem;
+			--padding-l:5%;
+			align-items: center;
+			display: flex;
+			justify-content: flex-end;
+			padding:0 var(--padding-l);
+			gap:3.6%;
+			&::before {
+				bottom:0;
+				right:calc(var(--padding-l) - 4.8rem);
+			}
+			
+			p, .quotes {
+				flex-basis:50%;
+			}
+
+			p {
+				padding-left:5%;
+				padding-right:5rem;
+			}
+
+			&:nth-of-type(2) {
+				flex-direction: row-reverse;
+				justify-content: flex-start;
+				&::before {
+					bottom:0;
+					right:unset;
+					left:calc(var(--padding-l) - 4.8rem);
+				}
+				.quotes {
+					margin-bottom: 7rem;
+				}
+			}
+
+			&:nth-of-type(3) {
+				&::before {
+					bottom:unset;
+					top:-4rem;
+				}
+			}
+		}
+		.titre {
+			font-size: 5rem;
+			line-height: 7.6rem;
+			text-align: left;
+		}
+		.texte {
+			font-size: 3rem;
+			line-height: 4.2rem;
+			position: relative;
+			text-align: left;
+			&::after {
+				background-color: var(--wp--preset--color--noir);
+				border-radius: 100px;
+				content: '';
+				display: block;
+				height:4px;
+				left:0;
+				position:relative;
+				top:3rem;
+				width:7rem;
+			}
+		}
+
+		.quotes {
+			--picto-w:7.6rem;
+			--picto-h:7.9rem;
+			margin-bottom: 4rem;
+			padding:6rem 4rem 6rem 6rem;
+			&::after {
+				left:calc(-0.5 * var(--picto-w));
+				top:5rem;
+			}
+
+		}
+		blockquote,.client {
+			font-size: 2rem;
+			line-height: 2.8rem;
+		}
+		
+		.decor {
+			background-image: url('dots-degrade.svg');
+			background-repeat: repeat-x;
+			height:12rem;
+			transform-origin: center;
+			transform:rotateX(180deg);
+			width:100%;
+		}
+	}
+
+	@include bp(xl) {
+		.ligne:nth-of-type(3) {
+			transform:translateX(7rem);
+			p {
+				padding-left:0;
+			}
+		}
 	}
 }

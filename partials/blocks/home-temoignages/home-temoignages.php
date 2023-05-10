@@ -45,6 +45,7 @@ printf('<section class="acf home-temoignages %s">', $className);
 		echo '</ul>';
 	endif;
 
+	echo '<div class="decor"></div>';//Decor desktop uniquement
 
 echo '</section>';
 	
