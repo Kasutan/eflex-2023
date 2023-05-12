@@ -1366,6 +1366,42 @@ a:focus-visible {
   }
 }
 
+.home-video {
+  padding: 2.6rem;
+  position: relative;
+}
+.home-video::before {
+  background: linear-gradient(180deg, #00AAAD 0%, #08DDE1 100%);
+  content: " ";
+  display: block;
+  height: 80%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+@media (min-width: 1024px) {
+  .home-video {
+    padding: 5.4rem;
+  }
+  .home-video::after {
+    background-image: url("icons/dots-degrade.svg");
+    background-repeat: repeat-x;
+    content: " ";
+    display: block;
+    height: 15%;
+    position: absolute;
+    top: 80%;
+    left: 0;
+    width: 100%;
+  }
+  .home-video figure {
+    max-width: 149rem;
+    position: relative;
+    z-index: 1;
+  }
+}
+
 .blog .loop {
   --nb-col:1;
   justify-content: center;
