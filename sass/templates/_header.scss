@@ -74,7 +74,6 @@
 	display: flex;
 	height:var(--hauteur-banniere);
 	justify-content: center;
-	overflow: hidden;
 	margin: 0 auto;
 	position: relative;	
 	padding:var(--header-height) var(--padding-x) 0;
@@ -118,6 +117,21 @@
 			width:var(--largeur-trait);
 		}
 
+	}
+
+	@include bp(lg) {
+		--decor-h:10rem;
+		margin-bottom: var(--decor-h);
+		&::after {
+			background-image: url('icons/dots-degrade.svg');
+			background-repeat: repeat-x;
+			bottom:calc(-1 * var(--decor-h));
+			content:' ';
+			height:var(--decor-h);
+			left:0;
+			position: absolute;
+			width:100%;
+		}
 	}
 	
 	
