@@ -200,7 +200,17 @@ class BE_ACF_Customizations {
 			'Section avec titre principal, décors et 3 blocs de témoignages.',
 			'dashboard', 
 			false, 
-			array( 'temoignages','accueil')
+			array( 'temoignage','accueil')
+		);
+
+		/*********Bloc home-refs ***************/
+		$this->helper_register_block_type( 
+			'home-refs',
+			'Bloc logos de clients pour la Home',
+			'Section avec titre et grille de logos de clients.',
+			'dashboard', 
+			false, 
+			array( 'client','accueil','logo')
 		);
 
 

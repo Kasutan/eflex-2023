@@ -1,0 +1,46 @@
+@import "./././sass/abstracts/variables-et-mixins";
+
+.home-refs {
+	--couleur:var(--wp--preset--color--noir);
+	--nb-col:2;
+	--col-gap:3rem;
+	--row-gap:2rem;
+
+	padding:5rem 2rem;
+
+	.titre-section {
+		@include titre-section-avec-trait;
+	}
+
+	.logos {
+		
+		column-gap:var(--col-gap);
+		display: grid;
+		grid-template-columns: repeat(var(--nb-col),1fr);
+		row-gap:var(--row-gap);
+	}
+
+	img {
+		margin:auto;
+	}
+
+	@include bp(sm) {
+		--nb-col:3;
+	}
+
+	@include bp(md) {
+		--nb-col:4;
+	}
+	@include bp(lg) {
+		--couleur:var(--wp--preset--color--cyan-ad);
+		--nb-col:5;
+		padding:13rem 2rem;
+		.logos {
+			margin:0 auto;
+			max-width:138rem;
+		}
+	}
+	@include bp(xl) {
+		--col-gap:5rem;
+	}
+} 
