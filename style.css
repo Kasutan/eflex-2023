@@ -314,10 +314,6 @@ body .entry-content {
   padding: 0 var(--padding-x) 1px;
 }
 
-body.home .entry-content {
-  padding: 0;
-}
-
 .alignfull, .bleed-container {
   width: 100vw;
   margin-left: 50%;
@@ -597,6 +593,7 @@ a.bouton,
   color: var(--wp--preset--color--blanc);
   cursor: pointer;
   display: inline-block;
+  font-family: var(--font-poppins);
   font-size: 1.6rem;
   font-weight: 700;
   margin: 0;
@@ -1089,6 +1086,7 @@ a:focus-visible {
     color: var(--wp--preset--color--blanc);
     cursor: pointer;
     display: inline-block;
+    font-family: var(--font-poppins);
     font-size: 1.6rem;
     font-weight: 700;
     margin: 0;
@@ -1341,6 +1339,13 @@ a:focus-visible {
     --nb-col:3;
     --ratio:1.5;
   }
+}
+
+body.home .entry-content {
+  padding: 0;
+}
+body.home .site-main {
+  padding-bottom: 0;
 }
 
 .home-gris {
