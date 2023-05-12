@@ -213,6 +213,16 @@ class BE_ACF_Customizations {
 			array( 'client','accueil','logo')
 		);
 
+		/*********Bloc home-checks ***************/
+		$this->helper_register_block_type( 
+			'home-checks',
+			'Bloc 3 fonctionnalités pour la Home',
+			'Section avec titre, 3 fonctionnalités et 2 boutons.',
+			'dashboard', 
+			false, 
+			array( 'fonctionnalite','accueil','check')
+		);
+
 
 	}
 }

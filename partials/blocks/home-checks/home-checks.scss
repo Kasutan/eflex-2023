@@ -47,10 +47,58 @@
 		text-align: center;
 	}
 
+	@include bp(md) {
+		.check {
+			margin-left:auto;
+			margin-right:auto;
+			max-width: 42rem;
+		}
+
+		.liens {
+			gap:5rem;
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+		}
+		.bouton {
+			margin:0;
+			&:first-of-type {
+				margin-left: auto;
+			}
+		}
+	}
 	@include bp(lg) {
 		--picto-w:4.1rem;
+		padding:9rem 2rem;
+		.checks {
+			column-gap:3rem;
+			display: grid;
+			grid-template-columns: repeat(3,1fr);
+		}
+		.check {
+			font-size: 2rem;
+			line-height: 2.8rem;
+			margin-bottom: 6rem;
+			&::before {
+				margin-bottom: 2.9rem;
+			}
+		}
+		.texte {
+			font-size: 2.6rem;
+			line-height: 3.6rem;
+			margin-bottom: 7.6rem;
+		}
+		.bouton {
+			min-width: 30rem;
+			max-width: 34rem;
+		}
+	}
 
-		padding:13rem 2rem;
+	@include bp(xl) {
+		.checks {
+			column-gap:7rem;
+			margin:2rem auto 0;
+			max-width:140rem;
+		}
 		
 	}
 	

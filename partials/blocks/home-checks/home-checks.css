@@ -1,0 +1,124 @@
+.home-checks {
+  --couleur:var(--wp--preset--color--blanc);
+  background: transparent linear-gradient(180deg, #00AAAD 0%, #08DDE1 100%) 0% 0% no-repeat padding-box;
+  color: var(--couleur);
+  padding: 5rem 2rem;
+  --picto-w:2.7rem;
+}
+.home-checks .titre-section {
+  --largeur-trait:7rem;
+  --top-trait:1.9rem;
+  --ep-trait:2px;
+  color: var(--couleur);
+  font-family: var(--font-poppins);
+  margin-bottom: 2.9rem;
+  margin-top: 0;
+  padding-bottom: var(--top-trait);
+  text-align: center;
+  text-transform: uppercase;
+}
+.home-checks .titre-section::after {
+  background-color: var(--couleur);
+  border-radius: 100px;
+  content: "";
+  display: block;
+  height: var(--ep-trait);
+  left: calc((100% - var(--largeur-trait)) / 2);
+  position: relative;
+  top: var(--top-trait);
+  width: var(--largeur-trait);
+}
+@media (min-width: 1024px) {
+  .home-checks .titre-section {
+    --largeur-trait:10rem;
+    --ep-trait:6px;
+    --top-trait:4rem;
+    font-size: 5.6rem;
+    line-height: 6rem;
+    margin-bottom: calc(9.5rem - var(--top-trait));
+  }
+}
+.home-checks .check {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 2.7rem;
+  position: relative;
+  text-align: center;
+}
+.home-checks .check::before {
+  background-image: url("check.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  content: "";
+  display: block;
+  height: var(--picto-w);
+  left: calc((100% - var(--picto-w)) / 2);
+  margin-bottom: 1.2rem;
+  position: relative;
+  width: var(--picto-w);
+}
+.home-checks .bouton {
+  display: block;
+  margin: 0 auto 1.8rem;
+  max-width: 23rem;
+}
+.home-checks .texte {
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 2.8rem;
+  margin-bottom: 3.8rem;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .home-checks .check {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 42rem;
+  }
+  .home-checks .liens {
+    gap: 5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .home-checks .bouton {
+    margin: 0;
+  }
+  .home-checks .bouton:first-of-type {
+    margin-left: auto;
+  }
+}
+@media (min-width: 1024px) {
+  .home-checks {
+    --picto-w:4.1rem;
+    padding: 9rem 2rem;
+  }
+  .home-checks .checks {
+    column-gap: 3rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .home-checks .check {
+    font-size: 2rem;
+    line-height: 2.8rem;
+    margin-bottom: 6rem;
+  }
+  .home-checks .check::before {
+    margin-bottom: 2.9rem;
+  }
+  .home-checks .texte {
+    font-size: 2.6rem;
+    line-height: 3.6rem;
+    margin-bottom: 7.6rem;
+  }
+  .home-checks .bouton {
+    min-width: 30rem;
+    max-width: 34rem;
+  }
+}
+@media (min-width: 1600px) {
+  .home-checks .checks {
+    column-gap: 7rem;
+    margin: 2rem auto 0;
+    max-width: 140rem;
+  }
+}
