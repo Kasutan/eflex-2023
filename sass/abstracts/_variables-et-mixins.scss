@@ -61,6 +61,7 @@
 	color:var(--wp--preset--color--blanc);
 	cursor: pointer;
 	display:inline-block;
+	font-family: var(--font-poppins);
 	font-size: 1.6rem;
 	font-weight: 700;
 	margin: 0;
@@ -136,7 +137,7 @@
 		--largeur-trait:10rem;
 		--ep-trait:6px;
 		--top-trait:4rem;
-		
+
 		font-size: 5.6rem;
 		line-height: 6rem;
 		margin-bottom: calc(9.5rem - var(--top-trait));
