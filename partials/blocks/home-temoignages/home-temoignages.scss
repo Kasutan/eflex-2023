@@ -108,9 +108,7 @@
 	
 
 	@include bp(lg) {
-		padding-left:0;
-		padding-right:0;
-		padding-top: 9rem;
+		padding: 9rem 0 0;
 		.titre-section {
 			--largeur-trait:10rem;
 			--ep-trait:6px;

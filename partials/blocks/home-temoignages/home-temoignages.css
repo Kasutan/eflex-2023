@@ -99,9 +99,7 @@
 }
 @media (min-width: 1024px) {
   .home-temoignages {
-    padding-left: 0;
-    padding-right: 0;
-    padding-top: 9rem;
+    padding: 9rem 0 0;
   }
   .home-temoignages .titre-section {
     --largeur-trait:10rem;
