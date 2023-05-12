@@ -6,28 +6,8 @@
 	padding:3rem 2rem;
 
 	.titre-section {
-		--largeur-trait:7rem;
-		--top-trait:1.9rem;
-		--ep-trait:2px;
-		color:var(--wp--preset--color--noir);
-		font-family: var(--font-poppins);
-		margin-bottom: 2.9rem;
-		margin-top: 0;
-		padding-bottom: var(--top-trait);
-		text-align: center;
-		text-transform: uppercase;
-
-		&::after {
-			background-color: var(--wp--preset--color--noir);
-			border-radius: 100px;
-			content: '';
-			display: block;
-			height:var(--ep-trait);
-			left:calc((100% - var(--largeur-trait)) / 2);
-			position:relative;
-			top:var(--top-trait);
-			width:var(--largeur-trait);
-		}
+		--couleur:var(--wp--preset--color--noir);
+		@include titre-section-avec-trait;
 	}
 
 	.ligne {
@@ -109,14 +89,7 @@
 
 	@include bp(lg) {
 		padding: 9rem 0 0;
-		.titre-section {
-			--largeur-trait:10rem;
-			--ep-trait:6px;
-			--top-trait:4rem;
-			font-size: 5.6rem;
-			line-height: 6rem;
-			margin-bottom: calc(9.5rem - var(--top-trait));
-		}
+		
 		.ligne {
 			--dots-w:27.6rem;
 			--dots-h:24.7rem;

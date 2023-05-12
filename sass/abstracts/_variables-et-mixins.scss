@@ -109,9 +109,36 @@
 }
 
 
-@mixin border-custom {
-	border-image-source: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='%23D18300FF' stroke-width='2' stroke-dasharray='18%2c 12' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
-	border-image-slice: 1;
-	border-image-repeat: round;
-	border-image-width:1px 0 0; //uniquement border-top
+@mixin titre-section-avec-trait {
+	--largeur-trait:7rem;
+	--top-trait:1.9rem;
+	--ep-trait:2px;
+	color:var(--couleur);
+	font-family: var(--font-poppins);
+	margin-bottom: 2.9rem;
+	margin-top: 0;
+	padding-bottom: var(--top-trait);
+	text-align: center;
+	text-transform: uppercase;
+
+	&::after {
+		background-color: var(--couleur);
+		border-radius: 100px;
+		content: '';
+		display: block;
+		height:var(--ep-trait);
+		left:calc((100% - var(--largeur-trait)) / 2);
+		position:relative;
+		top:var(--top-trait);
+		width:var(--largeur-trait);
+	}
+	@include bp(lg) {
+		--largeur-trait:10rem;
+		--ep-trait:6px;
+		--top-trait:4rem;
+		
+		font-size: 5.6rem;
+		line-height: 6rem;
+		margin-bottom: calc(9.5rem - var(--top-trait));
+	}
 }
