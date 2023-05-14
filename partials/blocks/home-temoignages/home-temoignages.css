@@ -2,6 +2,15 @@
   background-image: url("dots-degrade.svg");
   background-repeat: repeat-x;
   padding: 3rem 2rem;
+  /*
+  @include bp(xl) {
+  	.ligne:nth-of-type(3) {
+  		transform:translateX(7rem);
+  		& > p {
+  			padding-left:0;
+  		}
+  	}
+  }*/
 }
 .home-temoignages .titre-section {
   --couleur:var(--wp--preset--color--noir);
@@ -129,7 +138,7 @@
   .home-temoignages .ligne p, .home-temoignages .ligne .quotes {
     flex-basis: 50%;
   }
-  .home-temoignages .ligne p {
+  .home-temoignages .ligne > p {
     padding-left: 5%;
     padding-right: 5rem;
   }
@@ -192,13 +201,5 @@
     transform-origin: center;
     transform: rotateX(180deg);
     width: 100%;
-  }
-}
-@media (min-width: 1600px) {
-  .home-temoignages .ligne:nth-of-type(3) {
-    transform: translateX(7rem);
-  }
-  .home-temoignages .ligne:nth-of-type(3) p {
-    padding-left: 0;
   }
 }
