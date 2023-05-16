@@ -1,7 +1,7 @@
 @import "./././sass/abstracts/variables-et-mixins";
 
 .home-refs {
-	--couleur:var(--wp--preset--color--noir);
+	--couleur:var(--wp--preset--color--cyan-ad);
 	--nb-col:2;
 	--col-gap:3rem;
 	--row-gap:2rem;
@@ -32,7 +32,6 @@
 		--nb-col:4;
 	}
 	@include bp(lg) {
-		--couleur:var(--wp--preset--color--cyan-ad);
 		--nb-col:5;
 		padding:13rem 2rem;
 		.logos {
