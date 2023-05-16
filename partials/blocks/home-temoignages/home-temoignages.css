@@ -41,8 +41,8 @@
     --largeur-trait:10rem;
     --ep-trait:6px;
     --top-trait:4rem;
-    font-size: 5.6rem;
-    line-height: 6rem;
+    font-size: 5.04rem;
+    line-height: 5.4rem;
     margin-bottom: calc(9.5rem - var(--top-trait));
   }
 }
@@ -160,13 +160,13 @@
     top: -4rem;
   }
   .home-temoignages .titre {
-    font-size: 5rem;
-    line-height: 7.6rem;
+    font-size: 4.5rem;
+    line-height: 6.84rem;
     text-align: left;
   }
   .home-temoignages .texte {
-    font-size: 3rem;
-    line-height: 4.2rem;
+    font-size: 2.7rem;
+    line-height: 3.8rem;
     position: relative;
     text-align: left;
   }
@@ -192,8 +192,8 @@
     top: 5rem;
   }
   .home-temoignages blockquote, .home-temoignages .client {
-    font-size: 2rem;
-    line-height: 2.8rem;
+    font-size: 1.8rem;
+    line-height: 2.52rem;
   }
   .home-temoignages .decor {
     background-image: url("dots-degrade.svg");
