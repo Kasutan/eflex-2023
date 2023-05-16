@@ -77,6 +77,7 @@
 }
 .home-temoignages .texte {
   display: block;
+  font-weight: 700;
   margin-bottom: 3.9rem;
   text-align: center;
 }
