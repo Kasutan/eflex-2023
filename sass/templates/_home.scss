@@ -5,6 +5,13 @@ body.home  {
 	.site-main {
 		padding-bottom: 0;
 	}
+	.logo-header {
+		opacity: 0;
+		transition:opacity ease-in-out 0.4s;
+		&.fade-in {
+			opacity: 1;
+		}
+	}
 }
 
 .home-gris {

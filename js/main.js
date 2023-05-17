@@ -4,34 +4,39 @@
 		var width=$(window).width();
 
 		
-		
-
-
-		//Supprimer les attributs aria-describedby qui pointent vers des éléments inexistants
-		var inputsAvecAria=$('[aria-describedby]');
-		if(inputsAvecAria.length > 0) {
-			$(inputsAvecAria).each(function() {
-				var cible=$(this).attr('aria-describedby');
-				if($('#'+cible).length === 0) {
-					$(this).removeAttr('aria-describedby');
-				}
-			});
-		}
-
-		//Corriger la valeur de l'attribut for du label select
-		var labelToFix=$('label[for*="select"]');
-		console.log(labelToFix);
-		if(labelToFix.length > 0) {
-			$(labelToFix).each(function() {
-				var f=$(this).attr("for");
-				console.log('f',f);
-				f=f.replace('-label','');
-				console.log('f',f);
-
-				$(this).attr('for',f);
-
-			})
-		}
-
 	}); //fin document ready
 })( jQuery );
+
+
+/*=================================================
+Animations
+=================================================*/
+//Only Use the IntersectionObserver if it is supported
+
+if ('IntersectionObserver' in window) {
+	const config = {
+		rootMargin: '0 0 -300px 0',
+		threshold: [0, 0.25, 0.3, 0.4, 1]
+		};
+
+	const logoHeader = jQuery('.logo-header');
+	const homeLogoBlock=document.querySelectorAll('.home-logo');
+	
+		
+	observer = new IntersectionObserver((entries) => {
+		entries.forEach(entry => {
+			if (entry.intersectionRatio > 0) {
+				jQuery(logoHeader).removeClass('fade-in');
+			} else {
+				jQuery(logoHeader).addClass('fade-in');
+			}
+		}, config);
+	});
+	homeLogoBlock.forEach(item => {
+		observer.observe(item);
+	});
+
+} else {
+	//if Intersection Observer is not supported, add classes right away
+	jQuery('.home-logo').addClass('fade-in'); 
+}

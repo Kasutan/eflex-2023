@@ -1384,6 +1384,13 @@ body.home .entry-content {
 body.home .site-main {
   padding-bottom: 0;
 }
+body.home .logo-header {
+  opacity: 0;
+  transition: opacity ease-in-out 0.4s;
+}
+body.home .logo-header.fade-in {
+  opacity: 1;
+}
 
 .home-gris {
   background: transparent linear-gradient(180deg, #fff 0%, #F7F7F7 100%) 0% 0% no-repeat padding-box;
