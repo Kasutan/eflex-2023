@@ -143,3 +143,9 @@
 		margin-bottom: calc(9.5rem - var(--top-trait));
 	}
 }
+
+@mixin ninja-placeholder {
+	color: #231F20;
+	font-weight: 700;
+	opacity:0.2;
+}
