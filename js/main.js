@@ -1,13 +1,3 @@
-(function($) {
-
-	$( document ).ready(function() {
-		var width=$(window).width();
-
-		
-	}); //fin document ready
-})( jQuery );
-
-
 /*=================================================
 Animations
 =================================================*/
@@ -15,12 +5,12 @@ Animations
 
 if ('IntersectionObserver' in window) {
 	const config = {
-		rootMargin: '0 0 -300px 0',
+		//rootMargin: '0 0 -300px 0',
 		threshold: [0, 0.25, 0.3, 0.4, 1]
 		};
 
 	const logoHeader = jQuery('.logo-header');
-	const homeLogoBlock=document.querySelectorAll('.home-logo');
+	const homeLogoBlock=document.querySelectorAll('.home-logo .logo');
 	
 		
 	observer = new IntersectionObserver((entries) => {
