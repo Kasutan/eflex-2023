@@ -456,8 +456,8 @@ textarea {
 }
 
 ::selection {
-  background: var(--wp--preset--color--citron-200);
-  color: var(--wp--preset--color--noir);
+  background: var(--wp--preset--color--cyan-ad);
+  color: var(--wp--preset--color--blanc);
 }
 
 strong,
@@ -547,7 +547,8 @@ i {
 
 mark,
 ins {
-  background: var(--wp--preset--color--citron-200);
+  background: var(--wp--preset--color--cyan-ad);
+  color: var(--wp--preset--color--blanc);
   text-decoration: none;
 }
 
