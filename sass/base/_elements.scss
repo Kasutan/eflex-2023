@@ -142,7 +142,7 @@ textarea {
 			color:var(--wp--preset--color--cyan-ad);
 		}
 	}
-	label {
+	.nf-form-content label {
 		font-size: 2rem;
 		font-weight: 700;
 		line-height: 2.8rem;
@@ -172,7 +172,15 @@ textarea {
 		margin-left: 1.8rem;
 	}
 
+	.list-radio-wrap {
+		border-bottom: solid 1px var(--wp--preset--color--gris-eb);
+		border-top: solid 1px var(--wp--preset--color--gris-eb);
+		margin:3rem 0;
+		padding:3rem 0 2rem;
+	}
 	.list-radio-wrap .nf-field-element {
+		
+
 		input {
 			@include screen-reader-text;
 		}
@@ -183,25 +191,33 @@ textarea {
 		label {
 			margin-left: 17px !important;
 			margin-right: 2.3rem;
+			position: relative;
 		}
 		li label::after {
-			border-color:#666868;
 			background-color: white;
+			border:solid 1px #666868;
+			border-radius: 100%;
+			bottom: 5px;
+			content:' ';
 			height: 14px;
-			width: 14px;
 			left: -18px;
-			bottom: 3px;
+			position: absolute;
 			top: unset;
+			width: 14px;
 		}
 
 		li label.nf-checked-label {
 			&::before {
 				background:var(--wp--preset--color--cyan-ad);
-				left: -14px;
-				bottom: 7px;
+				border-radius: 100%;
+				bottom: 9px;
+				content:' ';
 				height:6px;
-				width:6px;
+				left: -14px;
+				position: absolute;
 				top:unset;
+				width:6px;
+				z-index: 1;
 			}
 		}
 		input[type="radio"]:focus + label::after {
@@ -223,26 +239,51 @@ textarea {
 	}
 	
 	//Checkbox pour accepter l'utilisation des données personnelles
-	.check-data {
-		border-top: solid 1px var(--bleu);
-		padding-bottom: 1rem;
-		.nf-field-label {
-			padding-left: 5px;
-		}
-		input[type='checkbox'] {
-			border: 1px solid #707070;
-			width: 16px;
-			height: 16px;
-			color: var(--bleu);
-			display: inline-block;
+	.nf-form-content .checkbox-container.label-right {
+		border-top: solid 1px var(--wp--preset--color--gris-eb);
+		display: block;
+		margin-top: 3rem;
+		padding-top: 3rem;
 
-			&:checked {
-				background-color: var(--bleu-clair);
-				background-image: url('icons/check-bleu.svg');
-				background-position: center;
-				background-repeat: no-repeat;
-				background-size: contain;
+		input {
+			@include screen-reader-text;
+		}
+		
+		.nf-field-label label {
+			font-weight: 600;
+			padding-left:0;
+			&:before {
+				background-color: #fff;
+				border: 1px solid #666868;
+				border-radius: 100%;
+				content:'';
+				display: inline-block;
+				height: 14px;
+				margin-right: 12px;
+				width: 14px;
+
 			}
+			&.nf-checked-label::after {
+				color:var(--wp--preset--color--cyan-ad);
+				content:'✔';
+				height:6px;
+				left: 0;
+				position: absolute;
+				top:28px;
+				width:6px;
+				z-index: 1;
+			}
+		}
+	}
+
+	input[type="submit"]:not([type="button"]) {
+		background-color: var(--wp--preset--color--cyan-ad);
+		color:var(--wp--preset--color--blanc);
+		padding-left:4rem;
+		padding-right:4rem;
+		&:hover, &:focus, &:active {
+			background-color: #03BEC2;
+			color:var(--wp--preset--color--blanc);
 		}
 	}
 	
@@ -260,9 +301,7 @@ textarea {
 				}
 			}
 		}
-		.submit-wrap { 
-			margin-top: 6rem;
-		}
+		
 	}
 	
 }
