@@ -239,9 +239,14 @@ textarea {
 	}
 	
 	//Checkbox pour accepter l'utilisation des données personnelles
+	.checkbox-wrap.field-wrap {
+		display: block;
+		.nf-field-label {
+			padding-left: 0;
+		}
+	}
 	.nf-form-content .checkbox-container.label-right {
 		border-top: solid 1px var(--wp--preset--color--gris-eb);
-		display: block;
 		margin-top: 3rem;
 		padding-top: 3rem;
 

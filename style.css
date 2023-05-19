@@ -983,9 +983,14 @@ textarea:-moz-placeholder { /* Firefox 18- */
   min-width: 24.6rem;
   padding: 0.5rem 3rem;
 }
+.nf-form-wrap .checkbox-wrap.field-wrap {
+  display: block;
+}
+.nf-form-wrap .checkbox-wrap.field-wrap .nf-field-label {
+  padding-left: 0;
+}
 .nf-form-wrap .nf-form-content .checkbox-container.label-right {
   border-top: solid 1px var(--wp--preset--color--gris-eb);
-  display: block;
   margin-top: 3rem;
   padding-top: 3rem;
 }
