@@ -182,7 +182,10 @@ textarea {
 		
 
 		input {
+			display: block;
+			margin-right: 0 !important;
 			@include screen-reader-text;
+
 		}
 		li {
 			align-items: center;
@@ -220,10 +223,13 @@ textarea {
 				z-index: 1;
 			}
 		}
-		input[type="radio"]:focus + label::after {
-			border-color:var(--wp--preset--color--cyan-ad);
-			box-shadow: none;
+		input[type="radio"]:focus + label {
+			color:var(--wp--preset--color--cyan-ad);
+			&::after {
+				border-color:var(--wp--preset--color--cyan-ad);
+				box-shadow: none;
 
+			}
 		}
 
 	}
@@ -244,6 +250,15 @@ textarea {
 		.nf-field-label {
 			padding-left: 0;
 		}
+
+		&:focus-within {
+			.nf-field-label label {
+				color:var(--wp--preset--color--cyan-ad);
+				&::before {
+					border-color:var(--wp--preset--color--cyan-ad);
+				}
+			}
+		}
 	}
 	.nf-form-content .checkbox-container.label-right {
 		border-top: solid 1px var(--wp--preset--color--gris-eb);
@@ -251,9 +266,11 @@ textarea {
 		padding-top: 3rem;
 
 		input {
+			display: block;
 			@include screen-reader-text;
 		}
-		
+
+	
 		.nf-field-label label {
 			font-weight: 600;
 			padding-left:0;

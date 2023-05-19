@@ -925,6 +925,8 @@ textarea:-moz-placeholder { /* Firefox 18- */
   padding: 3rem 0 2rem;
 }
 .nf-form-wrap .list-radio-wrap .nf-field-element input {
+  display: block;
+  margin-right: 0 !important;
   border: 0;
   clip: rect(1px, 1px, 1px, 1px);
   -webkit-clip-path: inset(50%);
@@ -971,6 +973,9 @@ textarea:-moz-placeholder { /* Firefox 18- */
   width: 6px;
   z-index: 1;
 }
+.nf-form-wrap .list-radio-wrap .nf-field-element input[type=radio]:focus + label {
+  color: var(--wp--preset--color--cyan-ad);
+}
 .nf-form-wrap .list-radio-wrap .nf-field-element input[type=radio]:focus + label::after {
   border-color: var(--wp--preset--color--cyan-ad);
   box-shadow: none;
@@ -989,12 +994,19 @@ textarea:-moz-placeholder { /* Firefox 18- */
 .nf-form-wrap .checkbox-wrap.field-wrap .nf-field-label {
   padding-left: 0;
 }
+.nf-form-wrap .checkbox-wrap.field-wrap:focus-within .nf-field-label label {
+  color: var(--wp--preset--color--cyan-ad);
+}
+.nf-form-wrap .checkbox-wrap.field-wrap:focus-within .nf-field-label label::before {
+  border-color: var(--wp--preset--color--cyan-ad);
+}
 .nf-form-wrap .nf-form-content .checkbox-container.label-right {
   border-top: solid 1px var(--wp--preset--color--gris-eb);
   margin-top: 3rem;
   padding-top: 3rem;
 }
 .nf-form-wrap .nf-form-content .checkbox-container.label-right input {
+  display: block;
   border: 0;
   clip: rect(1px, 1px, 1px, 1px);
   -webkit-clip-path: inset(50%);
