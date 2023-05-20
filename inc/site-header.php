@@ -3,8 +3,11 @@
 add_action('tha_header_top','kasutan_header_top');
 function kasutan_header_top() {
 
-		printf('<div class="logo-header"><a href="/" class="logo-link" title="Accueil">
-		%s</a></div>',kasutan_picto(array("icon"=>"logo-eflex-color","size"=>false)));
+		printf('<div class="logo-header"><a href="%s" class="logo-link" title="Accueil">
+		%s</a></div>',
+			apply_filters( 'wpml_home_url', get_option( 'home' ) ),
+			kasutan_picto(array("icon"=>"logo-eflex-color","size"=>false))
+		);
 
 
 	if( has_nav_menu( 'primary' ) ) {
