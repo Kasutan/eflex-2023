@@ -22,7 +22,6 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 
 @import "abstracts/variables-et-mixins";
 @import "base/normalize";
-@import "base/utilities";
 @import "base/layout";
 @import "base/typography";
 @import "base/boutons";
@@ -33,6 +32,4 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 @import "templates/footer";
 @import "templates/loop";
 @import "templates/home";
-@import "templates/blog";
 @import "templates/search";
-@import "templates/single";
