@@ -327,6 +327,39 @@ textarea {
 	}
 	
 }
+
+/*--------------------------------------------------------------
+## Checkbox Matomo
+--------------------------------------------------------------*/
+#matomo_optout_checkbox {
+	@include screen-reader-text
+}
+#matomo_opted_in_label, #matomo_opted_out_label {
+	color:var(--wp--preset--color--noir);
+	font-weight: 600;
+	position: relative;
+	&:before {
+		background-color: #fff;
+		border: 1px solid #666868;
+		border-radius: 100%;
+		content:'';
+		display: inline-block;
+		height: 14px;
+		margin-right: 12px;
+		width: 14px;
+
+	}
+}
+#matomo_opted_in_label::after {
+	color:var(--wp--preset--color--cyan-ad);
+	content:'✔';
+	height:6px;
+	left: 0;
+	position: absolute;
+	top:-6px;
+	width:6px;
+	z-index: 1;
+}
 /*--------------------------------------------------------------
 # Media
 --------------------------------------------------------------*/

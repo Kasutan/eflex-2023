@@ -1070,6 +1070,51 @@ textarea:-moz-placeholder { /* Firefox 18- */
 }
 
 /*--------------------------------------------------------------
+## Checkbox Matomo
+--------------------------------------------------------------*/
+#matomo_optout_checkbox {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  -webkit-clip-path: inset(50%);
+          clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;
+  width: 1px;
+  word-wrap: normal !important;
+  /* Many screen reader and browser combinations announce broken words as they would appear visually. */
+}
+
+#matomo_opted_in_label, #matomo_opted_out_label {
+  color: var(--wp--preset--color--noir);
+  font-weight: 600;
+  position: relative;
+}
+#matomo_opted_in_label:before, #matomo_opted_out_label:before {
+  background-color: #fff;
+  border: 1px solid #666868;
+  border-radius: 100%;
+  content: "";
+  display: inline-block;
+  height: 14px;
+  margin-right: 12px;
+  width: 14px;
+}
+
+#matomo_opted_in_label::after {
+  color: var(--wp--preset--color--cyan-ad);
+  content: "✔";
+  height: 6px;
+  left: 0;
+  position: absolute;
+  top: -6px;
+  width: 6px;
+  z-index: 1;
+}
+
+/*--------------------------------------------------------------
 # Media
 --------------------------------------------------------------*/
 .page-content .wp-smiley,
