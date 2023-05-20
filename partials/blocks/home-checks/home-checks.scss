@@ -37,7 +37,7 @@
 		display: block;
 		font-size: 2.2rem;
 		margin:0 auto 1.8rem;
-		max-width: 23rem;
+		max-width: 34rem;
 	}
 
 	.texte {
@@ -62,6 +62,7 @@
 		}
 		.bouton {
 			margin:0;
+			min-width: 30rem;
 			&:first-of-type {
 				margin-left: auto;
 			}
@@ -88,10 +89,7 @@
 			line-height: 3.24rem;
 			margin-bottom: 7.6rem;
 		}
-		.bouton {
-			min-width: 30rem;
-			max-width: 34rem;
-		}
+	
 	}
 
 	@include bp(xl) {

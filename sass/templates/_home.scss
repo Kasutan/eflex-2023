@@ -23,6 +23,7 @@ body.home  {
 	}
 	@include bp(md) {
 		p {
+			margin:0 auto;
 			max-width: 80%;
 		}
 	}
