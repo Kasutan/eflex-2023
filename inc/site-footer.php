@@ -22,5 +22,4 @@ function kasutan_main_footer() {
 				}
 		}
 
-	echo '</div>';
 }

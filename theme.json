@@ -74,12 +74,6 @@
 			]
 		},
 		"custom": {
-			"spacing": {
-				"small": "max(1.25rem, 5vw)",
-				"medium": "clamp(2rem, 8vw, calc(4 * var(--wp--style--block-gap)))",
-				"large": "clamp(4rem, 10vw, 8rem)",
-				"outer": "var(--wp--custom--spacing--small, 1.25rem)"
-			},
 			"typography": {
 				"font-size": {
 					"small": "1.8rem",
@@ -87,13 +81,13 @@
 					"large": "2.6rem",
 					"huge": "3rem",
 					"gigantic": "4rem",
-					"colossal": "5.rem"
+					"colossal": "5rem"
 				},
 				"line-height": {
-					"tiny": 1.15,
-					"small": 1.2,
-					"medium": 1.4,
-					"normal": 1.6
+					"tiny": "1.15",
+					"small": "1.2",
+					"medium": "1.4",
+					"normal": "1.6"
 				}
 			}
 		},
