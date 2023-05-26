@@ -229,35 +229,16 @@ body .entry-content {
   min-height: 50vh;
 }
 
-.show-for-md,
-.show-for-lg {
+/* Classe utilitaire spéciale pour les br */
+.hidden-xs {
   display: none;
 }
 
-@media (min-width: 768px) {
-  .show-for-md {
-    display: initial;
-  }
-  .hide-for-md {
-    display: none;
+@media screen and (min-width: 992px) {
+  .hidden-xs {
+    display: block;
   }
 }
-@media (min-width: 1024px) {
-  .show-for-lg {
-    display: initial;
-  }
-  .hide-for-lg {
-    display: none;
-  }
-}
-/* Echelle z-index 
-Elements qui ont juste besoin d'être au-dessus de leur voisin : 1
-Overlay : 5
-Sticky header : 10
-Menu mobile : 10
-Sous-menu desktop : 10;
-
-*/
 /* lato-regular - latin */
 @font-face {
   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
