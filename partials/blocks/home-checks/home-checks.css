@@ -112,6 +112,9 @@
     line-height: 3.24rem;
     margin-bottom: 7.6rem;
   }
+  .home-checks .bouton {
+    width: 34rem;
+  }
 }
 @media (min-width: 1600px) {
   .home-checks .checks {
