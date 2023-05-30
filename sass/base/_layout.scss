@@ -27,8 +27,10 @@ body {
 
 //Réglages de largeur communs à tous les templates
 .site-container {
-	@include largeur-max;
 
+	.site-main, .site-footer {
+		@include largeur-max;
+	}
 	.site-main {
 		padding-bottom: 2.4rem;
 	}
@@ -37,10 +39,7 @@ body {
 		padding-top: 2.4rem;
 	}
 
-	@include bp(lg) {
-		
 
-	}
 }
 
 

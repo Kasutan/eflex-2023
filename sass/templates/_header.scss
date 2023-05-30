@@ -11,12 +11,6 @@
 	top: 0;
 	width:100%;
 	z-index: 10;
-
-	@include largeur-max;
-
-	@include bp(xxl) {
-		left:calc((100vw - var(--largeur-max)) / 2);
-	}
 }
 
 
@@ -34,12 +28,13 @@
 
 //Layout du header
 
-.site-header {
+.header-container {
 	--taille-logo:10rem;
 	
 	align-items: center;
 	display: flex;
 	justify-content: space-between;
+	@include largeur-max;
 	padding-left: 1.7rem;
 
 	@include bp(lg) {
