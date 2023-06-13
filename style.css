@@ -1427,7 +1427,7 @@ body.home .logo-header.fade-in {
     width: 100%;
   }
   .home-video figure {
-    max-width: 149rem;
+    max-width: 128rem;
     position: relative;
     z-index: 1;
   }
