@@ -11,8 +11,10 @@ function kasutan_main_footer() {
 		$copyright="";
 		if(function_exists('get_field')) {
 			$copyright=wp_kses_post(get_field('eflex_copyright','option'));
+			$copyright2=wp_kses_post(get_field('eflex_copyright_2','option'));
 		}
-		if($copyright) printf('<span class="copy">%s</span>',$copyright);
+		if($copyright) printf('<p>%s</p>',$copyright);
+		if($copyright2) printf('<span class="copy">%s</span>',$copyright2);
 		//Liens
 		if( has_nav_menu( 'footer-liens')) {
 				

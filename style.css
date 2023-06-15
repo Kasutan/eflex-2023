@@ -1318,8 +1318,12 @@ a:focus-visible {
   text-align: center;
 }
 .site-footer a {
-  color: var(--wp--preset--color--noir);
+  color: var(--wp--preset--color--cyan-ad);
   text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+.site-footer a:hover, .site-footer a:focus {
+  color: var(--wp--preset--color--noir);
 }
 @media (min-width: 1024px) {
   .site-footer {

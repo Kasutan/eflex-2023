@@ -11,8 +11,12 @@
 	text-align: center;
 
 	a {
-		color: var(--wp--preset--color--noir);
+		color: var(--wp--preset--color--cyan-ad);
 		text-decoration: none;
+		transition: color 0.3s ease-in-out;
+		&:hover, &:focus {
+			color: var(--wp--preset--color--noir);
+		}
 	}
 
 	@include bp(lg) {
