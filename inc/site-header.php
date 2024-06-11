@@ -7,7 +7,7 @@ function kasutan_header_top() {
 		printf('<div class="logo-header"><a href="%s" class="logo-link" title="Accueil">
 		%s</a></div>',
 			apply_filters( 'wpml_home_url', get_option( 'home' ) ),
-			kasutan_picto(array("icon"=>"logo-eflex-color","size"=>false))
+			kasutan_picto(array("icon"=>"Logo-Eleneo-RVB","size"=>false))
 		);
 
 

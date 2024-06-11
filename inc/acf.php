@@ -109,8 +109,8 @@ class BE_ACF_Customizations {
 	function register_options_page() {
 		if ( function_exists( 'acf_add_options_page' ) ) {
 			acf_add_options_page(array(
-				'page_title' 	=> 'Réglages du site eflex',
-				'menu_title'	=> 'Réglages du site eflex',
+				'page_title' 	=> 'Réglages du site Eleneo',
+				'menu_title'	=> 'Réglages du site Eleneo',
 				'menu_slug' 	=> 'site-settings',
 				'capability'	=> 'edit_posts',
 				'position' 		=> '2.5',
