@@ -29,7 +29,7 @@
 //Layout du header
 
 .header-container {
-	--taille-logo:10rem;
+	--taille-logo:15rem;
 	
 	align-items: center;
 	display: flex;
@@ -37,10 +37,14 @@
 	@include largeur-max;
 	padding-left: 1.7rem;
 
+	
 	@include bp(lg) {
-		--taille-logo:14.9rem;
+		--taille-logo:20rem;
 		padding-left: 2.8rem;
-
+	}
+	
+	@include bp(xl) {
+		--taille-logo:25rem;
 	}
 
 }

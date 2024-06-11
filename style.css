@@ -172,7 +172,12 @@ body {
   --padding-x:2.3rem;
   --hauteur-banniere:250px;
   --largeur-max:1800px;
-  --header-height:6rem;
+  --header-height:4rem;
+}
+@media (min-width: 768px) {
+  :root {
+    --header-height:6rem;
+  }
 }
 @media (min-width: 1024px) {
   :root {
@@ -1203,7 +1208,7 @@ a:focus-visible {
 }
 
 .header-container {
-  --taille-logo:10rem;
+  --taille-logo:15rem;
   align-items: center;
   display: flex;
   justify-content: space-between;
@@ -1214,8 +1219,13 @@ a:focus-visible {
 }
 @media (min-width: 1024px) {
   .header-container {
-    --taille-logo:14.9rem;
+    --taille-logo:20rem;
     padding-left: 2.8rem;
+  }
+}
+@media (min-width: 1600px) {
+  .header-container {
+    --taille-logo:25rem;
   }
 }
 
@@ -1462,7 +1472,7 @@ body.home .logo-header.fade-in {
     line-height: 4rem;
   }
   .home-gris ul {
-    font-weight: 500;
+    font-weight: 600;
     font-size: 2rem;
     line-height: 2.8rem;
   }

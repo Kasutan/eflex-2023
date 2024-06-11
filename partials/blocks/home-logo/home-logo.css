@@ -78,4 +78,10 @@
     padding-left: 16rem;
     padding-right: 4.8rem;
   }
+  .home-logo .logo {
+    flex: 0 0 50rem;
+    margin-bottom: 0;
+    margin-right: 6rem;
+    width: 50rem;
+  }
 }
