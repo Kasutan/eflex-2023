@@ -18,22 +18,63 @@ body.home  {
 	background: transparent linear-gradient(180deg, #fff 0%, #F7F7F7 100%) 0% 0% no-repeat padding-box;
 	font-weight: 700;
 	padding:4rem 2rem;
-	p + p {
-		margin-top: 4rem;
+
+	h2 {
+		--couleur:var(--wp--preset--color--noir);
+		@include titre-section-avec-trait;
 	}
+	p {
+		margin-bottom: 1em;
+	}
+	strong {
+		color:var(--wp--preset--color--noir);
+	}
+
+	--picto-w:2.3rem;
+	ul {
+		list-style: none !important;
+	}
+	li {
+		margin-bottom: 1em;
+		padding-left: calc(1.5 *  var(--picto-w));
+		position: relative;
+
+		&::before {
+			background-image: url('icons/check-cyan.svg');
+			background-repeat: no-repeat;
+			background-size: contain;
+			content:'';
+			display: block;
+			height:var(--picto-w);
+			left:0;
+			position:absolute;
+			top:5px;
+			width:var(--picto-w);
+		}
+	}
+	
 	@include bp(md) {
-		p {
-			margin:0 auto;
+		p, ul {
+			margin-left:auto;
+			margin-right: auto;
 			max-width: 80%;
 		}
 	}
 
 	@include bp(lg) {
-		font-size: 2.7rem;
-		line-height: 3.8rem;
-		padding-bottom: 7rem;
+		padding-top: 13.5rem;
+		padding-bottom: 10rem;
+		p, ul {
+			max-width: 100rem;
+		}
 		p {
-			max-width: calc(124rem - 8rem);
+			font-size: 3rem;
+			line-height: 4rem;
+		}
+		ul {
+			font-weight: 500;
+			font-size: 2rem;
+			line-height: 2.8rem;
 		}
 	}
 }

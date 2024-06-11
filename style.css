@@ -1380,24 +1380,91 @@ body.home .logo-header.fade-in {
   background: transparent linear-gradient(180deg, #fff 0%, #F7F7F7 100%) 0% 0% no-repeat padding-box;
   font-weight: 700;
   padding: 4rem 2rem;
+  --picto-w:2.3rem;
 }
-.home-gris p + p {
-  margin-top: 4rem;
+.home-gris h2 {
+  --couleur:var(--wp--preset--color--noir);
+  --largeur-trait:7rem;
+  --top-trait:1.9rem;
+  --ep-trait:2px;
+  color: var(--couleur);
+  font-family: var(--font-poppins);
+  margin-bottom: 2.9rem;
+  margin-top: 0;
+  padding-bottom: var(--top-trait);
+  text-align: center;
+  text-transform: uppercase;
+}
+.home-gris h2::after {
+  background-color: var(--couleur);
+  border-radius: 100px;
+  content: "";
+  display: block;
+  height: var(--ep-trait);
+  left: calc((100% - var(--largeur-trait)) / 2);
+  position: relative;
+  top: var(--top-trait);
+  width: var(--largeur-trait);
+}
+@media (min-width: 1024px) {
+  .home-gris h2 {
+    --largeur-trait:10rem;
+    --ep-trait:6px;
+    --top-trait:4rem;
+    font-size: 5.04rem;
+    line-height: 5.4rem;
+    margin-bottom: calc(9.5rem - var(--top-trait));
+  }
+}
+.home-gris p {
+  margin-bottom: 1em;
+}
+.home-gris strong {
+  color: var(--wp--preset--color--noir);
+}
+.home-gris ul {
+  list-style: none !important;
+}
+.home-gris li {
+  margin-bottom: 1em;
+  padding-left: calc(1.5 * var(--picto-w));
+  position: relative;
+}
+.home-gris li::before {
+  background-image: url("icons/check-cyan.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  content: "";
+  display: block;
+  height: var(--picto-w);
+  left: 0;
+  position: absolute;
+  top: 5px;
+  width: var(--picto-w);
 }
 @media (min-width: 768px) {
-  .home-gris p {
-    margin: 0 auto;
+  .home-gris p, .home-gris ul {
+    margin-left: auto;
+    margin-right: auto;
     max-width: 80%;
   }
 }
 @media (min-width: 1024px) {
   .home-gris {
-    font-size: 2.7rem;
-    line-height: 3.8rem;
-    padding-bottom: 7rem;
+    padding-top: 13.5rem;
+    padding-bottom: 10rem;
+  }
+  .home-gris p, .home-gris ul {
+    max-width: 100rem;
   }
   .home-gris p {
-    max-width: 116rem;
+    font-size: 3rem;
+    line-height: 4rem;
+  }
+  .home-gris ul {
+    font-weight: 500;
+    font-size: 2rem;
+    line-height: 2.8rem;
   }
 }
 
