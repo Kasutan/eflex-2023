@@ -173,6 +173,59 @@ body.home  {
 	}
 }
 
+.home-academy {
+	background-image: url('icons/dots-degrade.svg');
+	background-repeat: repeat-x;
+	padding:10rem 2rem 4rem;
+	position:relative;
+
+	&::before {
+		//NOTE si besoin de la modifier depuis le BO utiliser enable media replace
+		background-image: url('/wp-content/uploads/2024/06/img-bkg-academy.jpg');
+		background-size: cover;
+		background-position: center center;
+		background-repeat: no-repeat;
+		content:'';
+		height:100%;
+		left:0;
+		position:absolute;
+		top:0;
+		width: 100%;
+	}
+	& > * {
+		position: relative;
+	}
+
+	h2 {
+		--couleur:var(--wp--preset--color--noir);
+		@include titre-section-avec-trait;
+	}
+
+	p:first-of-type {
+		font-weight: 700;
+	}
+
+	@include bp(md) {
+		padding-bottom: 6rem;
+
+		p, ul {
+			margin-left:auto;
+			margin-right: auto;
+			max-width: 80%;
+		}
+	}
+	@include bp(lg) {
+		padding: 18rem 2rem 10rem;
+		padding-bottom: 10rem;
+		p, ul {
+			max-width: 100rem;
+		}
+		p:first-of-type {
+			font-size: 2.4rem;
+			line-height: 3.2rem;
+		}
+	}
+}
 .home-video {
 	padding:2.6rem; 
 	position: relative;
