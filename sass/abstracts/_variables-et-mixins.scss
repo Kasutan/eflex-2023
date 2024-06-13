@@ -77,6 +77,7 @@
 	
 	&:hover, &:focus, &:active {
 		background-color: #03BEC2;
+		color:var(--wp--preset--color--blanc);
 		text-decoration: none;
 	}
 	@include bp(lg) {
