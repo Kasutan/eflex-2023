@@ -579,11 +579,22 @@ html {
   box-sizing: inherit;
 }
 
-hr {
-  background-color: #ccc;
+hr, .wp-block-separator {
+  background-color: #F7F7F7;
   border: 0;
   height: 1px;
-  margin-bottom: 1.5em;
+  margin: 0 auto;
+  max-width: calc(100% - 2rem);
+}
+@media (min-width: 1024px) {
+  hr, .wp-block-separator {
+    max-width: 80%;
+  }
+}
+@media (min-width: 1600px) {
+  hr, .wp-block-separator {
+    max-width: 124.4rem;
+  }
 }
 
 .entry-content ul:not([class]) {
@@ -1578,6 +1589,23 @@ body.home .logo-header.fade-in {
   }
   .home-solutions img {
     margin-bottom: 5rem;
+  }
+}
+
+.home-advisory {
+  background: transparent linear-gradient(180deg, #FFFFFF 0%, #F7F7F7 100%) 0% 0% no-repeat padding-box;
+}
+.home-advisory ul {
+  font-weight: 400;
+}
+.home-advisory ul li strong {
+  color: var(--wp--preset--color--cyan-ad);
+  font-weight: 700;
+}
+@media (min-width: 1024px) {
+  .home-advisory p {
+    font-size: 2.4rem;
+    line-height: 3.2rem;
   }
 }
 

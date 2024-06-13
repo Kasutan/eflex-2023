@@ -155,6 +155,24 @@ body.home  {
 	}
 }
 
+.home-advisory {
+	background: transparent linear-gradient(180deg, #FFFFFF 0%, #F7F7F7 100%) 0% 0% no-repeat padding-box;
+	ul {
+		font-weight: 400;
+		li strong {
+			color:var(--wp--preset--color--cyan-ad);
+			font-weight: 700;
+		}
+	}
+	@include bp(lg) {
+		
+		p {
+			font-size: 2.4rem;
+			line-height: 3.2rem;
+		}
+	}
+}
+
 .home-video {
 	padding:2.6rem; 
 	position: relative;
