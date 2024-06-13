@@ -1538,12 +1538,15 @@ body.home .logo-header.fade-in {
   margin-bottom: 4rem;
 }
 .home-solutions .wp-block-column:first-of-type {
-  border-bottom: solid 1px #F7F7F7;
+  border-bottom: solid 1px #EBEBEB;
   padding-bottom: 4rem;
 }
 .home-solutions > p.has-text-color {
   font-size: 150%;
   margin-bottom: 2rem;
+}
+.home-solutions p + ul {
+  margin-top: -0.5em;
 }
 @media (min-width: 768px) {
   .home-solutions {
@@ -1558,7 +1561,7 @@ body.home .logo-header.fade-in {
   }
   .home-solutions .wp-block-column:first-of-type {
     border-bottom: none;
-    border-right: solid 1px #F7F7F7;
+    border-right: solid 1px #EBEBEB;
     padding-bottom: 0;
     padding-right: var(--gap);
   }
@@ -1569,7 +1572,7 @@ body.home .logo-header.fade-in {
 @media (min-width: 1024px) {
   .home-solutions {
     --gap:8rem;
-    padding: 18rem 3vw 10rem;
+    padding: 14rem 3vw 10rem;
   }
   .home-solutions img {
     margin-bottom: 4rem;
@@ -1603,6 +1606,9 @@ body.home .logo-header.fade-in {
   font-weight: 700;
 }
 @media (min-width: 1024px) {
+  .home-advisory {
+    padding-top: 8rem;
+  }
   .home-advisory p {
     font-size: 2.4rem;
     line-height: 3.2rem;
@@ -1610,10 +1616,18 @@ body.home .logo-header.fade-in {
 }
 
 .home-academy {
+  padding: 8rem 2rem 4rem;
+  position: relative;
+}
+.home-academy::after {
   background-image: url("icons/dots-degrade.svg");
   background-repeat: repeat-x;
-  padding: 10rem 2rem 4rem;
-  position: relative;
+  content: "";
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
 }
 .home-academy::before {
   background-image: url("/wp-content/uploads/2024/06/img-bkg-academy.jpg");
@@ -1679,8 +1693,7 @@ body.home .logo-header.fade-in {
 }
 @media (min-width: 1024px) {
   .home-academy {
-    padding: 18rem 2rem 10rem;
-    padding-bottom: 10rem;
+    padding-bottom: 11rem;
   }
   .home-academy p, .home-academy ul {
     max-width: 100rem;
@@ -1688,6 +1701,98 @@ body.home .logo-header.fade-in {
   .home-academy p:first-of-type {
     font-size: 2.4rem;
     line-height: 3.2rem;
+  }
+}
+
+.home-hiring {
+  background: transparent linear-gradient(180deg, #00AAAD 0%, #08DDE1 100%) 0% 0% no-repeat padding-box;
+  color: var(--wp--preset--color--blanc);
+  padding: 4rem 2rem;
+  --picto-w:2.3rem;
+}
+.home-hiring h2 {
+  --couleur:var(--wp--preset--color--blanc);
+  --largeur-trait:7rem;
+  --top-trait:1.9rem;
+  --ep-trait:2px;
+  color: var(--couleur);
+  font-family: var(--font-poppins);
+  margin-bottom: 2.9rem;
+  margin-top: 0;
+  padding-bottom: var(--top-trait);
+  text-align: center;
+  text-transform: uppercase;
+}
+.home-hiring h2::after {
+  background-color: var(--couleur);
+  border-radius: 100px;
+  content: "";
+  display: block;
+  height: var(--ep-trait);
+  left: calc((100% - var(--largeur-trait)) / 2);
+  position: relative;
+  top: var(--top-trait);
+  width: var(--largeur-trait);
+}
+@media (min-width: 1024px) {
+  .home-hiring h2 {
+    --largeur-trait:10rem;
+    --ep-trait:6px;
+    --top-trait:4rem;
+    font-size: 5.04rem;
+    line-height: 5.4rem;
+    margin-bottom: calc(9.5rem - var(--top-trait));
+  }
+}
+.home-hiring p {
+  margin-bottom: 1em;
+}
+.home-hiring strong {
+  color: var(--wp--preset--color--blanc);
+}
+.home-hiring ul {
+  list-style: none !important;
+}
+.home-hiring li {
+  margin-bottom: 1em;
+  padding-left: calc(1.5 * var(--picto-w));
+  position: relative;
+}
+.home-hiring li::before {
+  background-image: url("icons/check.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  content: "";
+  display: block;
+  height: var(--picto-w);
+  left: 0;
+  position: absolute;
+  top: 5px;
+  width: var(--picto-w);
+}
+@media (min-width: 768px) {
+  .home-hiring p, .home-hiring ul {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 80%;
+  }
+}
+@media (min-width: 1024px) {
+  .home-hiring {
+    padding-top: 8rem;
+    padding-bottom: 11rem;
+  }
+  .home-hiring p, .home-hiring ul {
+    max-width: 100rem;
+  }
+  .home-hiring p {
+    font-size: 2.4rem;
+    line-height: 3.2rem;
+  }
+  .home-hiring ul {
+    font-weight: 600;
+    font-size: 2rem;
+    line-height: 2.8rem;
   }
 }
 
