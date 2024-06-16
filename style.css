@@ -506,28 +506,35 @@ a.bouton,
   transition: all var(--transition);
   vertical-align: middle;
 }
-button:hover, button:focus, button:active,
+button:hover, button:focus, button:active, button:visited,
 input[type=button]:hover,
 input[type=button]:focus,
 input[type=button]:active,
+input[type=button]:visited,
 input[type=reset]:hover,
 input[type=reset]:focus,
 input[type=reset]:active,
+input[type=reset]:visited,
 input[type=submit]:hover,
 input[type=submit]:focus,
 input[type=submit]:active,
+input[type=submit]:visited,
 a.bouton:hover,
 a.bouton:focus,
 a.bouton:active,
+a.bouton:visited,
 .wp-element-button:hover,
 .wp-element-button:focus,
 .wp-element-button:active,
+.wp-element-button:visited,
 .wp-block-button.is-style-outline > .wp-block-button__link:hover,
 .wp-block-button.is-style-outline > .wp-block-button__link:focus,
 .wp-block-button.is-style-outline > .wp-block-button__link:active,
+.wp-block-button.is-style-outline > .wp-block-button__link:visited,
 .wp-block-button .wp-block-button__link.is-style-outline:hover,
 .wp-block-button .wp-block-button__link.is-style-outline:focus,
-.wp-block-button .wp-block-button__link.is-style-outline:active {
+.wp-block-button .wp-block-button__link.is-style-outline:active,
+.wp-block-button .wp-block-button__link.is-style-outline:visited {
   background-color: #03BEC2;
   color: var(--wp--preset--color--blanc);
   text-decoration: none;
@@ -1128,7 +1135,7 @@ a:focus-visible {
     transition: all var(--transition);
     vertical-align: middle;
   }
-  .nav-main .menu li a:hover, .nav-main .menu li a:focus, .nav-main .menu li a:active {
+  .nav-main .menu li a:hover, .nav-main .menu li a:focus, .nav-main .menu li a:active, .nav-main .menu li a:visited {
     background-color: #03BEC2;
     color: var(--wp--preset--color--blanc);
     text-decoration: none;

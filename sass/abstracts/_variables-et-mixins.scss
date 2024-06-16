@@ -75,7 +75,7 @@
 	vertical-align: middle;
 
 	
-	&:hover, &:focus, &:active {
+	&:hover, &:focus, &:active, &:visited {
 		background-color: #03BEC2;
 		color:var(--wp--preset--color--blanc);
 		text-decoration: none;
