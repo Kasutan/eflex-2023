@@ -1194,6 +1194,126 @@ a:focus-visible {
   }
 }
 /*--------------------------------------------------------------
+##  Volet avec les CTAs
+--------------------------------------------------------------*/
+.volet-cta {
+  align-items: center;
+  background-color: var(--wp--preset--color--cyan-ad);
+  display: none;
+  justify-content: center;
+  left: 0;
+  min-height: 100vh;
+  padding: 3rem;
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  z-index: 15;
+  --taille-x:2.5rem;
+}
+.volet-cta .cadre {
+  background-color: #fff;
+  padding: 2rem 4rem;
+  position: relative;
+}
+.volet-cta .titre-cta {
+  color: var(--wp--preset--color--noir);
+  font-family: var(--font-poppins);
+  font-size: 2.2rem;
+  font-weight: 700;
+  line-height: 2.8rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+.volet-cta .link-cta {
+  align-items: center;
+  background: #E9E9E9;
+  border-radius: 2rem;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+  padding: 1.1rem;
+}
+.volet-cta .texte-cta {
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 2.2rem;
+  margin-bottom: 0;
+  text-align: center;
+}
+.volet-cta .fermer {
+  background-color: transparent;
+  height: var(--taille-x);
+  padding: 0;
+  position: absolute;
+  right: 0;
+  top: calc(-1 * var(--taille-x));
+  width: var(--taille-x);
+}
+.volet-cta .fermer:hover, .volet-cta .fermer:focus, .volet-cta .fermer:active {
+  background-color: transparent;
+}
+.volet-cta .fermer:hover svg line, .volet-cta .fermer:focus svg line, .volet-cta .fermer:active svg line {
+  stroke: var(--wp--preset--color--noir);
+}
+@media (min-width: 768px) {
+  .volet-cta .cadre {
+    padding: 3rem 5rem;
+  }
+  .volet-cta .titre-cta {
+    font-size: 3rem;
+    line-height: 4rem;
+    margin-bottom: 5rem;
+  }
+  .volet-cta .cols-cta {
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
+  .volet-cta .link-cta {
+    background-color: transparent;
+    padding: 4rem 2rem;
+  }
+  .volet-cta .link-cta:first-of-type {
+    margin-right: 2rem;
+  }
+  .volet-cta .link-cta:last-of-type {
+    margin-left: 2rem;
+    position: relative;
+  }
+  .volet-cta .link-cta:nth-of-type(2)::before {
+    background-color: #EBEBEB;
+    content: "-";
+    height: 100%;
+    width: 1px;
+    position: absolute;
+    left: -2rem;
+    top: 0;
+    color: transparent;
+  }
+  .volet-cta .link-cta:hover, .volet-cta .link-cta:focus-visible, .volet-cta .link-cta:active {
+    background-color: #E9E9E9;
+  }
+  .volet-cta .texte-cta {
+    font-size: 2rem;
+    line-height: 2.8rem;
+  }
+  .volet-cta .fermer {
+    right: calc(-1 * var(--taille-x) - 0.5rem);
+    top: 0;
+  }
+}
+@media (min-width: 1600px) {
+  .volet-cta .cadre {
+    padding: 3rem 11.5rem;
+  }
+}
+@media (min-width: 1600px) {
+  .volet-cta .cadre {
+    padding: 3rem 8rem;
+  }
+}
+
+/*--------------------------------------------------------------
 ## Site header
 --------------------------------------------------------------*/
 .site-header {
