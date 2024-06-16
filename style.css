@@ -319,17 +319,6 @@ textarea {
   line-height: 1.4;
   -webkit-font-smoothing: antialiased;
 }
-@media (min-width: 1024px) {
-  body,
-  button,
-  input,
-  select,
-  optgroup,
-  textarea {
-    font-size: 2rem;
-  }
-}
-
 ::selection {
   background: var(--wp--preset--color--cyan-ad);
   color: var(--wp--preset--color--blanc);
@@ -539,19 +528,6 @@ a.bouton:visited,
   color: var(--wp--preset--color--blanc);
   text-decoration: none;
 }
-@media (min-width: 1024px) {
-  button,
-  input[type=button],
-  input[type=reset],
-  input[type=submit],
-  a.bouton,
-  .wp-element-button,
-  .wp-block-button.is-style-outline > .wp-block-button__link,
-  .wp-block-button .wp-block-button__link.is-style-outline {
-    font-size: 1.8rem;
-  }
-}
-
 .is-style-secondaire .wp-element-button,
 a.bouton.secondaire,
 button.secondaire {
@@ -1141,11 +1117,6 @@ a:focus-visible {
     text-decoration: none;
   }
 }
-@media (min-width: 768px) and (min-width: 1024px) {
-  .nav-main .menu li a {
-    font-size: 1.8rem;
-  }
-}
 /*--------------------------------------------------------------
 ## Language switcher
 --------------------------------------------------------------*/
@@ -1477,7 +1448,7 @@ a:focus-visible {
 }
 @media (min-width: 1024px) {
   .site-footer {
-    font-size: 2rem;
+    font-size: 1.8rem;
     padding: 2.1rem;
   }
   .site-footer .copy, .site-footer .nav-footer, .site-footer .menu, .site-footer .menu-item {
@@ -1608,13 +1579,13 @@ body.home .logo-header.fade-in {
     max-width: 100rem;
   }
   .home-gris p {
-    font-size: 3rem;
-    line-height: 4rem;
+    font-size: 2.7rem;
+    line-height: 3.6rem;
   }
   .home-gris ul {
     font-weight: 600;
-    font-size: 2rem;
-    line-height: 2.8rem;
+    font-size: 1.6rem;
+    line-height: 2.5rem;
   }
 }
 
@@ -1737,8 +1708,8 @@ body.home .logo-header.fade-in {
     padding-top: 8rem;
   }
   .home-advisory p {
-    font-size: 2.4rem;
-    line-height: 3.2rem;
+    font-size: 2.2rem;
+    line-height: 2.9rem;
   }
 }
 
@@ -1826,8 +1797,8 @@ body.home .logo-header.fade-in {
     max-width: 100rem;
   }
   .home-academy p:first-of-type {
-    font-size: 2.4rem;
-    line-height: 3.2rem;
+    font-size: 2.2rem;
+    line-height: 2.9rem;
   }
 }
 
@@ -1913,13 +1884,13 @@ body.home .logo-header.fade-in {
     max-width: 100rem;
   }
   .home-hiring p {
-    font-size: 2.4rem;
-    line-height: 3.2rem;
+    font-size: 2.2rem;
+    line-height: 2.9rem;
   }
   .home-hiring ul {
     font-weight: 600;
-    font-size: 2rem;
-    line-height: 2.8rem;
+    font-size: 1.8rem;
+    line-height: 2.5rem;
   }
 }
 

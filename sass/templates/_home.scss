@@ -68,13 +68,13 @@ body.home  {
 			max-width: 100rem;
 		}
 		p {
-			font-size: 3rem;
-			line-height: 4rem;
+			font-size: 2.7rem;
+			line-height: 3.6rem;
 		}
 		ul {
 			font-weight: 600;
-			font-size: 2rem;
-			line-height: 2.8rem;
+			font-size: 1.6rem;
+			line-height: 2.5rem;
 		}
 	}
 }
@@ -171,8 +171,8 @@ body.home  {
 	@include bp(lg) {
 		padding-top: 8rem;
 		p {
-			font-size: 2.4rem;
-			line-height: 3.2rem;
+			font-size: 2.2rem;
+			line-height: 2.9rem;
 		}
 	}
 }
@@ -233,8 +233,8 @@ body.home  {
 			max-width: 100rem;
 		}
 		p:first-of-type {
-			font-size: 2.4rem;
-			line-height: 3.2rem;
+			font-size: 2.2rem;
+			line-height: 2.9rem;
 		}
 	}
 }
@@ -294,13 +294,13 @@ body.home  {
 			max-width: 100rem;
 		}
 		p {
-			font-size: 2.4rem;
-			line-height: 3.2rem;
+			font-size: 2.2rem;
+			line-height: 2.9rem;
 		}
 		ul {
 			font-weight: 600;
-			font-size: 2rem;
-			line-height: 2.8rem;
+			font-size: 1.8rem;
+			line-height: 2.5rem;
 		}
 	}
 }
