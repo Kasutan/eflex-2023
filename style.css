@@ -563,7 +563,7 @@ html {
 }
 
 hr, .wp-block-separator {
-  background-color: #F7F7F7;
+  background-color: #ececec;
   border: 0;
   height: 1px;
   margin: 0 auto;
@@ -1531,7 +1531,7 @@ body.home .logo-header.fade-in {
   .home-gris h2 {
     --largeur-trait:10rem;
     --ep-trait:6px;
-    --top-trait:4rem;
+    --top-trait:2.75rem;
     font-size: 5.04rem;
     line-height: 5.4rem;
     margin-bottom: calc(9.5rem - var(--top-trait));
@@ -1622,7 +1622,7 @@ body.home .logo-header.fade-in {
   .home-solutions h2 {
     --largeur-trait:10rem;
     --ep-trait:6px;
-    --top-trait:4rem;
+    --top-trait:2.75rem;
     font-size: 5.04rem;
     line-height: 5.4rem;
     margin-bottom: calc(9.5rem - var(--top-trait));
@@ -1770,7 +1770,7 @@ body.home .logo-header.fade-in {
   .home-academy h2 {
     --largeur-trait:10rem;
     --ep-trait:6px;
-    --top-trait:4rem;
+    --top-trait:2.75rem;
     font-size: 5.04rem;
     line-height: 5.4rem;
     margin-bottom: calc(9.5rem - var(--top-trait));
@@ -1836,7 +1836,7 @@ body.home .logo-header.fade-in {
   .home-hiring h2 {
     --largeur-trait:10rem;
     --ep-trait:6px;
-    --top-trait:4rem;
+    --top-trait:2.75rem;
     font-size: 5.04rem;
     line-height: 5.4rem;
     margin-bottom: calc(9.5rem - var(--top-trait));
