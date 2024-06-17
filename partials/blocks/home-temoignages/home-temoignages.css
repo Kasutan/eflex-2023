@@ -40,7 +40,7 @@
   .home-temoignages .titre-section {
     --largeur-trait:10rem;
     --ep-trait:6px;
-    --top-trait:4rem;
+    --top-trait:2.75rem;
     font-size: 5.04rem;
     line-height: 5.4rem;
     margin-bottom: calc(9.5rem - var(--top-trait));

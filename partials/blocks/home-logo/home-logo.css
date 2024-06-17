@@ -49,7 +49,7 @@
 @media (min-width: 1024px) {
   .home-logo {
     flex-direction: row;
-    padding-left: 10vw;
+    padding-left: 8vw;
     padding-right: 3vw;
   }
   .home-logo .logo {
@@ -71,6 +71,12 @@
   }
   .home-logo .texte br {
     display: block;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .home-logo .logo {
+    flex: 0 0 42rem;
+    width: 42rem;
   }
 }
 @media (min-width: 1600px) {
