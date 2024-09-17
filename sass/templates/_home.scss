@@ -107,9 +107,11 @@ body.home  {
 		margin-bottom: 2rem;
 	}
 
-	p + ul {
-		margin-top: -0.5em;
+	& ul {
+		list-style: square;
+		list-style-position: inside;
 	}
+
 	
 	
 	@include bp(md) {

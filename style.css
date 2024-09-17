@@ -1643,8 +1643,9 @@ body.home .logo-header.fade-in {
   font-size: 150%;
   margin-bottom: 2rem;
 }
-.home-solutions p + ul {
-  margin-top: -0.5em;
+.home-solutions ul {
+  list-style: square;
+  list-style-position: inside;
 }
 @media (min-width: 768px) {
   .home-solutions {
