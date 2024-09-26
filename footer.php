@@ -20,4 +20,12 @@ echo '</div>';
 tha_body_bottom();
 wp_footer();
 
+?>
+<!-- Start of HubSpot Embed Code -->
+
+<script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/5056694.js"></script>
+
+<!-- End of HubSpot Embed Code -->
+<?php
+
 echo '</body></html>';
